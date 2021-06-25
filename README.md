@@ -71,7 +71,7 @@ max     -114.310000     41.950000  ...      15.000100       500001.000000
 ### Estrutura do Repositório
 
 ```Bash
-$ tree
+$ tree                                                                                                                                         5230ms 
 .
 ├── commit.sh
 ├── data
@@ -81,18 +81,44 @@ $ tree
 │   ├── dataset_preprocessed.ftr
 │   └── housing.csv
 ├── notebooks
+│   ├── catboost_info
+│   │   ├── catboost_training.json
+│   │   ├── learn
+│   │   │   └── events.out.tfevents
+│   │   ├── learn_error.tsv
+│   │   ├── time_left.tsv
+│   │   └── tmp
 │   ├── exploredata.ipynb
 │   ├── feature_selection.ipynb
-│   └── modeling.ipynb
+│   ├── figures
+│   │   ├── feature_importance_model_CatBoost.pdf
+│   │   ├── feature_importance_model_CatBoost.png
+│   │   ├── feature_importance_model_DecisionTree.pdf
+│   │   ├── feature_importance_model_DecisionTree.png
+│   │   ├── feature_importance_model_RandomForest.pdf
+│   │   ├── feature_importance_model_RandomForest.png
+│   │   ├── feature_importance_model_XGBoost.pdf
+│   │   └── feature_importance_model_XGBoost.png
+│   ├── modeling.ipynb
+│   └── requirements.txt
 ├── README.md
 └── scripts
+    ├── catboost_info
+    │   ├── catboost_training.json
+    │   ├── learn
+    │   │   └── events.out.tfevents
+    │   ├── learn_error.tsv
+    │   ├── time_left.tsv
+    │   └── tmp
     ├── feature_engineering.py
+    ├── figures
+    ├── logs
     ├── master.py
     ├── modeling.py
     ├── preprocessing.py
     └── requirements.txt
 
-3 directories, 15 files
+12 directories, 32 files
 
 ```
 
