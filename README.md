@@ -51,27 +51,35 @@ max     -114.310000     41.950000  ...      15.000100       500001.000000
 - [x] Cleaning Dataset (**DONE**)
 - [x] Dataset ([feather-format](https://github.com/wesm/feather)) already to do feature engineering
 
-1.1 - **Notebook/script**
-  - [x] [exploredata.ipynb](notebooks/exploredata.ipynb) (README (**WIP - UPDATE**))
-  - [x] [preprocessing.py](scripts/preprocessing.py) (**DONE**)
+1.1 - **Notebooks/script**
+  - [x] [exploredata.ipynb](notebooks/exploredata.ipynb)
+  - [x] [preprocessing.py](scripts/preprocessing.py)
 
 2 - Feature Engineering
-- [x] Feature selection
-- [x] Feature importance
+- [x] [feature engineering notebook](notebook/feature_engineering.ipynb)
+- [x] [feature engineering script](script/feature_engineering.py)
 
 3 - Train/Modeling
 
-- [x] training model
+- [x] [training model](notebook/modeling.ipynb)
+    - Model:
+        - [CatBoost Documentation](https://catboost.ai/docs):
+            ```Bash
+            Ease to use categorical features
+            Implementation of dataset processing
+            Improved accuracy
+            ```
 
 4 - Evalutation model
  
 - [ ] Evaluate modeling (**WIP**)
 - [ ] What we can improve? (**WIP**)
+- 
 
 ### Estrutura do Repositório
 
 ```Bash
-$ tree                                                                                                                                         5230ms 
+$ tree
 .
 ├── commit.sh
 ├── data
