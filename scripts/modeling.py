@@ -110,13 +110,12 @@ def pipeline_project(df, model):
 
 # Regression models
 def get_models():
-  models['RFR']=RandomForestRegressor(n_estimators=5, random_state = 42, n_jobs = -1)
-  models['DTR']=DecisionTreeRegressor()
+  models['RandomForest']=RandomForestRegressor(n_estimators=5, random_state = 42, n_jobs = -1)
+  models['DecisionTree']=DecisionTreeRegressor()
   #models['KNR']=KNeighborsRegressor()
-  models['XGBR']=xgb.XGBRegressor(objective="reg:linear", random_state=42)
+  models['XGBoost']=xgb.XGBRegressor(objective="reg:linear", random_state=42)
   models['CatBoost'] = cb.CatBoostRegressor(loss_function='RMSE')
   models['LinearR']= LinearRegression(n_jobs = -1) # Use all computer cores
-  models['LogisticR']= LogisticRegression(n_jobs = -1)
 
   return models
 
@@ -168,12 +167,17 @@ sns.boxplot(x=names, y=results, palette="Set3", linewidth=3, width=0.3)
 plt.title("Models")
 plt.ylabel("Scores") # MAE -- Mean Absolute Error
 #sns.xlabel("Models")
+plt.savefig('figures/scores_models.png')
+plt.savefig('figures/scores_importance_models.pdf')
 plt.show()
 
 feature_names =list(X.columns)
 
 # feature importance
 for name, model in models.items():
+
+    if(name == 'LinearR'):
+        continue
 
     list_feat_importances = list(model.feature_importances_)
     print(list_feat_importances)
