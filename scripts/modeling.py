@@ -115,8 +115,8 @@ def get_models():
   #models['KNR']=KNeighborsRegressor()
   models['XGBR']=xgb.XGBRegressor(objective="reg:linear", random_state=42)
   models['CatBoost'] = cb.CatBoostRegressor(loss_function='RMSE')
-  models['LinearR']= LinearRegression(n_jobs = -1) # Use all computer cores
-  models['LogisticR']= LogisticRegression()
+  models['LinearR']= LinearRegression(random_state = 42, n_jobs = -1) # Use all computer cores
+  models['LogisticR']= LogisticRegression(random_state = 42, n_jobs = -1)
 
   return models
 
