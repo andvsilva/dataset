@@ -1,0 +1,53 @@
+>>> date:  01/07/2021 10:47:22
+Loading dataset - cleaned to feature select/engineering...
+(20433, 10)
+Index(['longitude', 'latitude', 'housing_median_age', 'total_rooms',
+       'total_bedrooms', 'population', 'households', 'median_income',
+       'median_house_value', 'ocean_proximity'],
+      dtype='object')
+longitude             float64
+latitude              float64
+housing_median_age    float64
+total_rooms           float64
+total_bedrooms        float64
+population            float64
+households            float64
+median_income         float64
+median_house_value    float64
+ocean_proximity        object
+dtype: object
+0        NEAR BAY
+1        NEAR BAY
+2        NEAR BAY
+3        NEAR BAY
+4        NEAR BAY
+           ...   
+20428      INLAND
+20429      INLAND
+20430      INLAND
+20431      INLAND
+20432      INLAND
+Name: ocean_proximity, Length: 20433, dtype: object
+<1H OCEAN     44.21%
+INLAND        31.79%
+NEAR OCEAN    12.86%
+NEAR BAY      11.11%
+ISLAND         0.02%
+Name: ocean_proximity, dtype: object
+longitude              float64
+latitude               float64
+housing_median_age     float64
+total_rooms            float64
+total_bedrooms         float64
+population             float64
+households             float64
+median_income          float64
+median_house_value     float64
+ocean_proximity       category
+dtype: object
+saving the file format feather...
+time of execution (preprocessing): 0.0009 minutes
+the preprocessing is done.
+The next step is to do the modeling.
+>>> date:  01/07/2021 10:47:22
+All Done. :)

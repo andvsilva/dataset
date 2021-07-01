@@ -49,13 +49,13 @@ def main():
     os.system('pip3 install -r requirements.txt')
 
     # step 1
-    os.system('python preprocessing.py > logs/info-preprocess.dat') # > logs/info-preprocess.dat
+    os.system('python preprocessing.py') # > logs/info-preprocess.dat
     
     # step 2
-    os.system('python feature_engineering.py > logs/feature-eng.dat') # > logs/feature-eng.dat
+    os.system('python feature_engineering.py') # > logs/feature-eng.dat
     
     # step 3
-    os.system('python modeling.py > logs/modeling.dat') # > logs/modeling.dat
+    os.system('python modeling.py') # > logs/modeling.dat
 
     time_exec_min = round( (time.time() - start_time)/60, 4)
     
