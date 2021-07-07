@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 >>> date:  07/07/2021 18:26:22
+=======
+>>> date:  01/07/2021 10:47:20
+>>>>>>> 3d8cabaa47e311d9833de9366542a739f009f777
        longitude  latitude  ...  median_house_value  ocean_proximity
 0        -122.23     37.88  ...            452600.0         NEAR BAY
 1        -122.22     37.86  ...            358500.0         NEAR BAY
@@ -85,8 +89,15 @@ dtype: int64
 Number of rows.....................: 20433
 Number of columns..................: 10
 saving the file format feather...
+<<<<<<< HEAD
 time of execution (preprocessing): 0.0141 minutes
 the preprocessing is done.
 The next step is to do the feature engineering.
 >>> date:  07/07/2021 18:26:23
+=======
+time of execution (preprocessing): 0.0018 minutes
+the preprocessing is done.
+The next step is to do the feature engineering.
+>>> date:  01/07/2021 10:47:20
+>>>>>>> 3d8cabaa47e311d9833de9366542a739f009f777
 All Done. :)

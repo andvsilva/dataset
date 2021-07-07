@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 >>> date:  07/07/2021 18:26:43
+=======
+>>> date:  01/07/2021 10:47:22
+>>>>>>> 3d8cabaa47e311d9833de9366542a739f009f777
 Loading dataset - cleaned to feature select/engineering...
 (20433, 10)
 Index(['longitude', 'latitude', 'housing_median_age', 'total_rooms',
@@ -46,8 +50,15 @@ median_house_value     float64
 ocean_proximity       category
 dtype: object
 saving the file format feather...
+<<<<<<< HEAD
 time of execution (preprocessing): 0.0022 minutes
 the preprocessing is done.
 The next step is to do the modeling.
 >>> date:  07/07/2021 18:26:43
+=======
+time of execution (preprocessing): 0.0009 minutes
+the preprocessing is done.
+The next step is to do the modeling.
+>>> date:  01/07/2021 10:47:22
+>>>>>>> 3d8cabaa47e311d9833de9366542a739f009f777
 All Done. :)
