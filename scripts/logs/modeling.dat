@@ -1,0 +1,1135 @@
+Loading dataset - to modeling...
+       longitude  latitude  ...  median_house_value  ocean_proximity
+0        -122.23     37.88  ...            452600.0         NEAR BAY
+1        -122.22     37.86  ...            358500.0         NEAR BAY
+2        -122.24     37.85  ...            352100.0         NEAR BAY
+3        -122.25     37.85  ...            341300.0         NEAR BAY
+4        -122.25     37.85  ...            342200.0         NEAR BAY
+...          ...       ...  ...                 ...              ...
+20428    -121.09     39.48  ...             78100.0           INLAND
+20429    -121.21     39.49  ...             77100.0           INLAND
+20430    -121.22     39.43  ...             92300.0           INLAND
+20431    -121.32     39.43  ...             84700.0           INLAND
+20432    -121.24     39.37  ...             89400.0           INLAND
+
+[20433 rows x 10 columns]
+longitude              float64
+latitude               float64
+housing_median_age     float64
+total_rooms            float64
+total_bedrooms         float64
+population             float64
+households             float64
+median_income          float64
+median_house_value     float64
+ocean_proximity       category
+dtype: object
+{'RandomForest': RandomForestRegressor(n_estimators=5, n_jobs=-1, random_state=42), 'DecisionTree': DecisionTreeRegressor(), 'XGBoost': XGBRegressor(base_score=None, booster=None, colsample_bylevel=None,
+             colsample_bynode=None, colsample_bytree=None, gamma=None,
+             gpu_id=None, importance_type='gain', interaction_constraints=None,
+             learning_rate=None, max_delta_step=None, max_depth=None,
+             min_child_weight=None, missing=nan, monotone_constraints=None,
+             n_estimators=100, n_jobs=None, num_parallel_tree=None,
+             objective='reg:linear', random_state=42, reg_alpha=None,
+             reg_lambda=None, scale_pos_weight=None, subsample=None,
+             tree_method=None, validate_parameters=None, verbosity=None), 'CatBoost': <catboost.core.CatBoostRegressor object at 0x7f555c0181d0>, 'LinearR': LinearRegression(n_jobs=-1)}
+setting the pipeline object ...
+preprocessor...
+preprocessing: the categorical and numerical feature now...
+One Hot Encoder...
+categorical features: ['ocean_proximity']
+>>> pipeline defined!
+prediction...
+>RandomForest 0.797 (0.000)
+memory RAM released.
+memory RAM released.
+setting the pipeline object ...
+preprocessor...
+preprocessing: the categorical and numerical feature now...
+One Hot Encoder...
+categorical features: ['ocean_proximity']
+>>> pipeline defined!
+prediction...
+>DecisionTree 0.685 (0.000)
+memory RAM released.
+memory RAM released.
+setting the pipeline object ...
+preprocessor...
+preprocessing: the categorical and numerical feature now...
+One Hot Encoder...
+categorical features: ['ocean_proximity']
+>>> pipeline defined!
+[18:27:28] WARNING: ../src/objective/regression_obj.cu:170: reg:linear is now deprecated in favor of reg:squarederror.
+prediction...
+>XGBoost 0.835 (0.000)
+memory RAM released.
+memory RAM released.
+setting the pipeline object ...
+preprocessor...
+preprocessing: the categorical and numerical feature now...
+One Hot Encoder...
+categorical features: ['ocean_proximity']
+>>> pipeline defined!
+Learning rate set to 0.06501
+0:	learn: 110889.3204541	total: 49.4ms	remaining: 49.4s
+1:	learn: 106846.8756609	total: 53.5ms	remaining: 26.7s
+2:	learn: 103186.7613474	total: 57.2ms	remaining: 19s
+3:	learn: 100032.5759915	total: 62.6ms	remaining: 15.6s
+4:	learn: 96830.5358492	total: 65.4ms	remaining: 13s
+5:	learn: 94046.8713975	total: 68.7ms	remaining: 11.4s
+6:	learn: 91478.2130372	total: 71.6ms	remaining: 10.2s
+7:	learn: 89147.6044445	total: 75.4ms	remaining: 9.35s
+8:	learn: 87105.9449758	total: 78.7ms	remaining: 8.66s
+9:	learn: 85015.6195905	total: 82ms	remaining: 8.12s
+10:	learn: 83261.9781038	total: 85.3ms	remaining: 7.67s
+11:	learn: 81672.0928435	total: 88.3ms	remaining: 7.27s
+12:	learn: 80243.2428253	total: 93.4ms	remaining: 7.09s
+13:	learn: 78848.5678870	total: 97.1ms	remaining: 6.84s
+14:	learn: 77681.2998727	total: 100ms	remaining: 6.59s
+15:	learn: 76596.9462881	total: 103ms	remaining: 6.36s
+16:	learn: 75554.7403596	total: 109ms	remaining: 6.31s
+17:	learn: 74636.5220140	total: 114ms	remaining: 6.24s
+18:	learn: 73727.7210312	total: 118ms	remaining: 6.08s
+19:	learn: 72859.3140036	total: 121ms	remaining: 5.91s
+20:	learn: 72109.6592063	total: 125ms	remaining: 5.83s
+21:	learn: 71433.2551162	total: 128ms	remaining: 5.7s
+22:	learn: 70822.2744395	total: 132ms	remaining: 5.6s
+23:	learn: 70257.8756401	total: 138ms	remaining: 5.62s
+24:	learn: 69746.5417711	total: 146ms	remaining: 5.68s
+25:	learn: 69277.3805055	total: 152ms	remaining: 5.68s
+26:	learn: 68821.0262473	total: 157ms	remaining: 5.65s
+27:	learn: 68300.1375906	total: 162ms	remaining: 5.63s
+28:	learn: 67636.3796220	total: 167ms	remaining: 5.58s
+29:	learn: 67250.9294721	total: 172ms	remaining: 5.55s
+30:	learn: 66898.6196949	total: 176ms	remaining: 5.51s
+31:	learn: 66605.7534549	total: 180ms	remaining: 5.45s
+32:	learn: 66266.1317801	total: 188ms	remaining: 5.51s
+33:	learn: 65923.2170191	total: 195ms	remaining: 5.55s
+34:	learn: 65630.8026196	total: 202ms	remaining: 5.57s
+35:	learn: 65295.9569905	total: 207ms	remaining: 5.53s
+36:	learn: 64955.6801051	total: 211ms	remaining: 5.48s
+37:	learn: 64566.1075781	total: 215ms	remaining: 5.45s
+38:	learn: 64325.4690711	total: 219ms	remaining: 5.39s
+39:	learn: 64074.6210284	total: 224ms	remaining: 5.38s
+40:	learn: 63916.3431595	total: 227ms	remaining: 5.31s
+41:	learn: 63554.7142735	total: 231ms	remaining: 5.26s
+42:	learn: 63326.5027825	total: 237ms	remaining: 5.27s
+43:	learn: 63123.5803726	total: 242ms	remaining: 5.26s
+44:	learn: 62952.6669748	total: 245ms	remaining: 5.2s
+45:	learn: 62773.6883944	total: 249ms	remaining: 5.17s
+46:	learn: 62649.7397113	total: 255ms	remaining: 5.16s
+47:	learn: 62526.3723628	total: 259ms	remaining: 5.15s
+48:	learn: 62363.1860881	total: 263ms	remaining: 5.1s
+49:	learn: 62254.7999631	total: 267ms	remaining: 5.08s
+50:	learn: 62167.3058783	total: 274ms	remaining: 5.1s
+51:	learn: 61690.5831824	total: 279ms	remaining: 5.09s
+52:	learn: 61513.2451542	total: 284ms	remaining: 5.07s
+53:	learn: 61300.2650530	total: 290ms	remaining: 5.08s
+54:	learn: 61096.8164420	total: 295ms	remaining: 5.07s
+55:	learn: 60962.9021687	total: 299ms	remaining: 5.04s
+56:	learn: 60811.5416997	total: 306ms	remaining: 5.06s
+57:	learn: 60517.9008726	total: 312ms	remaining: 5.07s
+58:	learn: 60210.3560249	total: 319ms	remaining: 5.08s
+59:	learn: 60049.0844148	total: 325ms	remaining: 5.09s
+60:	learn: 59937.9566699	total: 329ms	remaining: 5.06s
+61:	learn: 59646.5370860	total: 337ms	remaining: 5.09s
+62:	learn: 59537.4212164	total: 344ms	remaining: 5.12s
+63:	learn: 59416.3338999	total: 351ms	remaining: 5.13s
+64:	learn: 59295.3180108	total: 356ms	remaining: 5.11s
+65:	learn: 59172.0715003	total: 361ms	remaining: 5.11s
+66:	learn: 59055.8478572	total: 368ms	remaining: 5.13s
+67:	learn: 58829.3552512	total: 372ms	remaining: 5.11s
+68:	learn: 58710.2205229	total: 377ms	remaining: 5.08s
+69:	learn: 58588.1567718	total: 382ms	remaining: 5.07s
+70:	learn: 58318.7912060	total: 388ms	remaining: 5.07s
+71:	learn: 58156.3908690	total: 395ms	remaining: 5.09s
+72:	learn: 58096.3136919	total: 401ms	remaining: 5.09s
+73:	learn: 58042.1685498	total: 405ms	remaining: 5.07s
+74:	learn: 57892.0986481	total: 411ms	remaining: 5.07s
+75:	learn: 57836.1817617	total: 417ms	remaining: 5.07s
+76:	learn: 57705.5993240	total: 422ms	remaining: 5.06s
+77:	learn: 57513.7261799	total: 426ms	remaining: 5.04s
+78:	learn: 57419.9262234	total: 432ms	remaining: 5.04s
+79:	learn: 57325.1754604	total: 438ms	remaining: 5.04s
+80:	learn: 57200.3444128	total: 442ms	remaining: 5.01s
+81:	learn: 57110.5000231	total: 446ms	remaining: 5s
+82:	learn: 56972.2039589	total: 451ms	remaining: 4.99s
+83:	learn: 56839.9463727	total: 455ms	remaining: 4.96s
+84:	learn: 56760.6850389	total: 461ms	remaining: 4.96s
+85:	learn: 56667.4753294	total: 467ms	remaining: 4.96s
+86:	learn: 56544.4904688	total: 471ms	remaining: 4.95s
+87:	learn: 56420.4749083	total: 479ms	remaining: 4.97s
+88:	learn: 56366.2456616	total: 491ms	remaining: 5.03s
+89:	learn: 56296.6277531	total: 500ms	remaining: 5.06s
+90:	learn: 56137.5823460	total: 506ms	remaining: 5.06s
+91:	learn: 56007.7674545	total: 512ms	remaining: 5.05s
+92:	learn: 55829.3761051	total: 519ms	remaining: 5.06s
+93:	learn: 55762.0834935	total: 523ms	remaining: 5.04s
+94:	learn: 55704.3155787	total: 528ms	remaining: 5.03s
+95:	learn: 55626.9679830	total: 533ms	remaining: 5.02s
+96:	learn: 55529.2977392	total: 537ms	remaining: 5s
+97:	learn: 55481.6987893	total: 541ms	remaining: 4.98s
+98:	learn: 55373.7477813	total: 551ms	remaining: 5.02s
+99:	learn: 55312.6075106	total: 558ms	remaining: 5.02s
+100:	learn: 55246.9667006	total: 564ms	remaining: 5.02s
+101:	learn: 55084.6959293	total: 568ms	remaining: 5s
+102:	learn: 54982.6295530	total: 575ms	remaining: 5s
+103:	learn: 54909.6609932	total: 580ms	remaining: 5s
+104:	learn: 54830.6182493	total: 584ms	remaining: 4.98s
+105:	learn: 54694.1206251	total: 590ms	remaining: 4.98s
+106:	learn: 54591.3227955	total: 596ms	remaining: 4.98s
+107:	learn: 54544.5066949	total: 602ms	remaining: 4.97s
+108:	learn: 54500.2538568	total: 607ms	remaining: 4.96s
+109:	learn: 54373.1315506	total: 614ms	remaining: 4.96s
+110:	learn: 54275.7041697	total: 617ms	remaining: 4.95s
+111:	learn: 54217.3978939	total: 623ms	remaining: 4.94s
+112:	learn: 54160.4489847	total: 629ms	remaining: 4.94s
+113:	learn: 54101.8438649	total: 635ms	remaining: 4.93s
+114:	learn: 54004.5073537	total: 644ms	remaining: 4.95s
+115:	learn: 53937.5875221	total: 649ms	remaining: 4.95s
+116:	learn: 53873.1261031	total: 657ms	remaining: 4.95s
+117:	learn: 53821.6658879	total: 663ms	remaining: 4.96s
+118:	learn: 53744.2617074	total: 668ms	remaining: 4.95s
+119:	learn: 53684.5462669	total: 675ms	remaining: 4.95s
+120:	learn: 53568.0034304	total: 680ms	remaining: 4.94s
+121:	learn: 53512.6819429	total: 684ms	remaining: 4.92s
+122:	learn: 53416.1611224	total: 689ms	remaining: 4.91s
+123:	learn: 53359.4374814	total: 695ms	remaining: 4.91s
+124:	learn: 53316.8236201	total: 698ms	remaining: 4.89s
+125:	learn: 53279.2354075	total: 704ms	remaining: 4.88s
+126:	learn: 53214.7760652	total: 709ms	remaining: 4.87s
+127:	learn: 53167.9958509	total: 712ms	remaining: 4.85s
+128:	learn: 53135.6400517	total: 715ms	remaining: 4.83s
+129:	learn: 53087.7467027	total: 719ms	remaining: 4.81s
+130:	learn: 53045.1634816	total: 722ms	remaining: 4.79s
+131:	learn: 52937.7211277	total: 725ms	remaining: 4.77s
+132:	learn: 52912.4809912	total: 730ms	remaining: 4.76s
+133:	learn: 52863.2567855	total: 735ms	remaining: 4.75s
+134:	learn: 52793.1789318	total: 746ms	remaining: 4.78s
+135:	learn: 52724.2717096	total: 767ms	remaining: 4.87s
+136:	learn: 52645.4873918	total: 780ms	remaining: 4.91s
+137:	learn: 52551.2584975	total: 784ms	remaining: 4.89s
+138:	learn: 52527.0211282	total: 791ms	remaining: 4.9s
+139:	learn: 52471.5916907	total: 802ms	remaining: 4.93s
+140:	learn: 52447.5493151	total: 811ms	remaining: 4.94s
+141:	learn: 52415.8766947	total: 816ms	remaining: 4.93s
+142:	learn: 52388.2027487	total: 825ms	remaining: 4.94s
+143:	learn: 52297.2803766	total: 830ms	remaining: 4.93s
+144:	learn: 52225.3951435	total: 840ms	remaining: 4.95s
+145:	learn: 52185.8817416	total: 849ms	remaining: 4.96s
+146:	learn: 52104.2276995	total: 862ms	remaining: 5s
+147:	learn: 52079.1575336	total: 873ms	remaining: 5.02s
+148:	learn: 52005.6876907	total: 879ms	remaining: 5.02s
+149:	learn: 51935.5313923	total: 888ms	remaining: 5.03s
+150:	learn: 51873.3879124	total: 898ms	remaining: 5.05s
+151:	learn: 51828.7996000	total: 906ms	remaining: 5.05s
+152:	learn: 51795.2217411	total: 917ms	remaining: 5.08s
+153:	learn: 51753.7759831	total: 925ms	remaining: 5.08s
+154:	learn: 51709.4255685	total: 929ms	remaining: 5.06s
+155:	learn: 51660.4744543	total: 937ms	remaining: 5.07s
+156:	learn: 51612.6818347	total: 944ms	remaining: 5.07s
+157:	learn: 51563.9064341	total: 957ms	remaining: 5.1s
+158:	learn: 51520.1019462	total: 964ms	remaining: 5.1s
+159:	learn: 51461.5123228	total: 969ms	remaining: 5.08s
+160:	learn: 51417.0081449	total: 974ms	remaining: 5.07s
+161:	learn: 51387.1085335	total: 977ms	remaining: 5.05s
+162:	learn: 51351.7648859	total: 982ms	remaining: 5.04s
+163:	learn: 51281.2447680	total: 989ms	remaining: 5.04s
+164:	learn: 51258.0472606	total: 999ms	remaining: 5.06s
+165:	learn: 51214.3165266	total: 1.01s	remaining: 5.07s
+166:	learn: 51147.3335350	total: 1.01s	remaining: 5.06s
+167:	learn: 51128.5668366	total: 1.02s	remaining: 5.06s
+168:	learn: 51048.6732783	total: 1.02s	remaining: 5.04s
+169:	learn: 51015.3324294	total: 1.04s	remaining: 5.06s
+170:	learn: 50961.2827290	total: 1.04s	remaining: 5.07s
+171:	learn: 50929.2010083	total: 1.05s	remaining: 5.08s
+172:	learn: 50887.2631312	total: 1.06s	remaining: 5.07s
+173:	learn: 50849.9100676	total: 1.07s	remaining: 5.08s
+174:	learn: 50803.1426611	total: 1.08s	remaining: 5.07s
+175:	learn: 50727.5009454	total: 1.08s	remaining: 5.06s
+176:	learn: 50692.6782078	total: 1.09s	remaining: 5.05s
+177:	learn: 50640.1131681	total: 1.09s	remaining: 5.04s
+178:	learn: 50608.3506398	total: 1.09s	remaining: 5.03s
+179:	learn: 50536.9857010	total: 1.1s	remaining: 5.02s
+180:	learn: 50519.2770926	total: 1.11s	remaining: 5.01s
+181:	learn: 50472.4564947	total: 1.11s	remaining: 4.99s
+182:	learn: 50435.6493549	total: 1.11s	remaining: 4.98s
+183:	learn: 50416.1281377	total: 1.12s	remaining: 4.97s
+184:	learn: 50360.3463781	total: 1.13s	remaining: 4.96s
+185:	learn: 50317.1415398	total: 1.13s	remaining: 4.96s
+186:	learn: 50274.9551261	total: 1.14s	remaining: 4.96s
+187:	learn: 50247.7573421	total: 1.15s	remaining: 4.98s
+188:	learn: 50217.4645534	total: 1.16s	remaining: 4.96s
+189:	learn: 50179.1180187	total: 1.16s	remaining: 4.95s
+190:	learn: 50141.7549908	total: 1.17s	remaining: 4.95s
+191:	learn: 50117.9028775	total: 1.17s	remaining: 4.93s
+192:	learn: 50076.8588908	total: 1.18s	remaining: 4.92s
+193:	learn: 50028.3760686	total: 1.18s	remaining: 4.92s
+194:	learn: 49982.5945405	total: 1.19s	remaining: 4.9s
+195:	learn: 49944.1853459	total: 1.19s	remaining: 4.89s
+196:	learn: 49908.5701801	total: 1.2s	remaining: 4.89s
+197:	learn: 49886.8727040	total: 1.2s	remaining: 4.88s
+198:	learn: 49851.4745582	total: 1.21s	remaining: 4.86s
+199:	learn: 49810.8993353	total: 1.21s	remaining: 4.85s
+200:	learn: 49783.8511663	total: 1.22s	remaining: 4.84s
+201:	learn: 49749.8054319	total: 1.22s	remaining: 4.82s
+202:	learn: 49713.9474964	total: 1.22s	remaining: 4.81s
+203:	learn: 49684.6565840	total: 1.23s	remaining: 4.8s
+204:	learn: 49645.6453204	total: 1.24s	remaining: 4.79s
+205:	learn: 49604.3044089	total: 1.24s	remaining: 4.78s
+206:	learn: 49576.3219141	total: 1.25s	remaining: 4.78s
+207:	learn: 49541.7964084	total: 1.25s	remaining: 4.77s
+208:	learn: 49515.2932000	total: 1.26s	remaining: 4.76s
+209:	learn: 49465.3620203	total: 1.26s	remaining: 4.75s
+210:	learn: 49421.3367480	total: 1.27s	remaining: 4.74s
+211:	learn: 49373.4710117	total: 1.27s	remaining: 4.73s
+212:	learn: 49347.4735003	total: 1.28s	remaining: 4.73s
+213:	learn: 49326.0831122	total: 1.28s	remaining: 4.71s
+214:	learn: 49300.2437085	total: 1.29s	remaining: 4.7s
+215:	learn: 49271.4454965	total: 1.29s	remaining: 4.69s
+216:	learn: 49235.9194246	total: 1.3s	remaining: 4.69s
+217:	learn: 49214.6961098	total: 1.3s	remaining: 4.67s
+218:	learn: 49182.4782839	total: 1.31s	remaining: 4.66s
+219:	learn: 49148.3421490	total: 1.31s	remaining: 4.66s
+220:	learn: 49129.8465987	total: 1.32s	remaining: 4.64s
+221:	learn: 49061.8757368	total: 1.32s	remaining: 4.63s
+222:	learn: 49046.8385750	total: 1.33s	remaining: 4.63s
+223:	learn: 49009.1673867	total: 1.33s	remaining: 4.63s
+224:	learn: 48981.6900835	total: 1.34s	remaining: 4.63s
+225:	learn: 48949.2879063	total: 1.35s	remaining: 4.62s
+226:	learn: 48928.4555669	total: 1.35s	remaining: 4.6s
+227:	learn: 48875.8829088	total: 1.36s	remaining: 4.6s
+228:	learn: 48858.8191269	total: 1.36s	remaining: 4.59s
+229:	learn: 48826.5228056	total: 1.37s	remaining: 4.58s
+230:	learn: 48791.5781487	total: 1.37s	remaining: 4.57s
+231:	learn: 48764.3050261	total: 1.38s	remaining: 4.56s
+232:	learn: 48738.2980238	total: 1.38s	remaining: 4.55s
+233:	learn: 48696.7956313	total: 1.39s	remaining: 4.54s
+234:	learn: 48679.1033976	total: 1.39s	remaining: 4.52s
+235:	learn: 48632.2914433	total: 1.39s	remaining: 4.51s
+236:	learn: 48615.2100226	total: 1.4s	remaining: 4.5s
+237:	learn: 48582.7802984	total: 1.4s	remaining: 4.49s
+238:	learn: 48554.6848972	total: 1.41s	remaining: 4.48s
+239:	learn: 48520.7653962	total: 1.41s	remaining: 4.47s
+240:	learn: 48496.3481471	total: 1.42s	remaining: 4.46s
+241:	learn: 48474.8212817	total: 1.42s	remaining: 4.45s
+242:	learn: 48446.8433590	total: 1.43s	remaining: 4.45s
+243:	learn: 48414.6929723	total: 1.43s	remaining: 4.43s
+244:	learn: 48371.9369155	total: 1.43s	remaining: 4.42s
+245:	learn: 48340.8271775	total: 1.44s	remaining: 4.41s
+246:	learn: 48318.4195262	total: 1.44s	remaining: 4.4s
+247:	learn: 48295.5255987	total: 1.45s	remaining: 4.39s
+248:	learn: 48246.3189410	total: 1.45s	remaining: 4.38s
+249:	learn: 48207.9095498	total: 1.46s	remaining: 4.38s
+250:	learn: 48185.2432994	total: 1.46s	remaining: 4.37s
+251:	learn: 48153.9537341	total: 1.47s	remaining: 4.36s
+252:	learn: 48135.7886118	total: 1.48s	remaining: 4.36s
+253:	learn: 48111.1907073	total: 1.48s	remaining: 4.34s
+254:	learn: 48095.9361850	total: 1.48s	remaining: 4.33s
+255:	learn: 48072.4729348	total: 1.48s	remaining: 4.32s
+256:	learn: 48055.8583492	total: 1.49s	remaining: 4.31s
+257:	learn: 48033.7674030	total: 1.5s	remaining: 4.3s
+258:	learn: 48002.8416528	total: 1.5s	remaining: 4.29s
+259:	learn: 47981.2302699	total: 1.5s	remaining: 4.27s
+260:	learn: 47951.0997843	total: 1.51s	remaining: 4.27s
+261:	learn: 47921.4104149	total: 1.51s	remaining: 4.26s
+262:	learn: 47900.1564826	total: 1.51s	remaining: 4.24s
+263:	learn: 47870.4549459	total: 1.52s	remaining: 4.23s
+264:	learn: 47846.6873253	total: 1.52s	remaining: 4.23s
+265:	learn: 47798.2348557	total: 1.53s	remaining: 4.21s
+266:	learn: 47769.1759618	total: 1.53s	remaining: 4.2s
+267:	learn: 47741.5172287	total: 1.54s	remaining: 4.2s
+268:	learn: 47726.5116062	total: 1.54s	remaining: 4.19s
+269:	learn: 47711.3388769	total: 1.54s	remaining: 4.18s
+270:	learn: 47695.5826079	total: 1.55s	remaining: 4.17s
+271:	learn: 47669.5801957	total: 1.56s	remaining: 4.17s
+272:	learn: 47640.9597870	total: 1.56s	remaining: 4.16s
+273:	learn: 47625.4041129	total: 1.56s	remaining: 4.15s
+274:	learn: 47597.5075173	total: 1.57s	remaining: 4.15s
+275:	learn: 47550.0668858	total: 1.58s	remaining: 4.14s
+276:	learn: 47529.3104331	total: 1.58s	remaining: 4.13s
+277:	learn: 47512.4785217	total: 1.59s	remaining: 4.13s
+278:	learn: 47487.3655118	total: 1.59s	remaining: 4.12s
+279:	learn: 47467.6644360	total: 1.6s	remaining: 4.11s
+280:	learn: 47444.0062303	total: 1.6s	remaining: 4.1s
+281:	learn: 47427.5520036	total: 1.61s	remaining: 4.09s
+282:	learn: 47408.1178917	total: 1.61s	remaining: 4.08s
+283:	learn: 47387.0794538	total: 1.61s	remaining: 4.07s
+284:	learn: 47375.4266232	total: 1.62s	remaining: 4.07s
+285:	learn: 47352.1520061	total: 1.63s	remaining: 4.06s
+286:	learn: 47338.5777993	total: 1.63s	remaining: 4.05s
+287:	learn: 47314.6238020	total: 1.64s	remaining: 4.04s
+288:	learn: 47298.2226711	total: 1.64s	remaining: 4.04s
+289:	learn: 47285.0464453	total: 1.65s	remaining: 4.03s
+290:	learn: 47249.4353333	total: 1.65s	remaining: 4.03s
+291:	learn: 47234.1522644	total: 1.66s	remaining: 4.03s
+292:	learn: 47207.6325127	total: 1.67s	remaining: 4.02s
+293:	learn: 47163.1495862	total: 1.67s	remaining: 4.01s
+294:	learn: 47142.0058661	total: 1.68s	remaining: 4s
+295:	learn: 47129.8430930	total: 1.68s	remaining: 4s
+296:	learn: 47107.4887516	total: 1.69s	remaining: 4s
+297:	learn: 47083.8488400	total: 1.69s	remaining: 3.99s
+298:	learn: 47050.5854965	total: 1.7s	remaining: 3.99s
+299:	learn: 47020.9431773	total: 1.71s	remaining: 3.98s
+300:	learn: 47009.1754447	total: 1.71s	remaining: 3.97s
+301:	learn: 46976.3081688	total: 1.71s	remaining: 3.96s
+302:	learn: 46952.4110823	total: 1.72s	remaining: 3.95s
+303:	learn: 46934.2998422	total: 1.72s	remaining: 3.94s
+304:	learn: 46895.7549462	total: 1.73s	remaining: 3.93s
+305:	learn: 46876.0701627	total: 1.73s	remaining: 3.93s
+306:	learn: 46854.2701608	total: 1.74s	remaining: 3.93s
+307:	learn: 46834.0925469	total: 1.75s	remaining: 3.92s
+308:	learn: 46823.3666347	total: 1.75s	remaining: 3.92s
+309:	learn: 46791.4031126	total: 1.76s	remaining: 3.91s
+310:	learn: 46775.5334668	total: 1.76s	remaining: 3.91s
+311:	learn: 46759.4818834	total: 1.77s	remaining: 3.9s
+312:	learn: 46734.6668990	total: 1.77s	remaining: 3.89s
+313:	learn: 46708.7736127	total: 1.78s	remaining: 3.88s
+314:	learn: 46690.3617674	total: 1.78s	remaining: 3.87s
+315:	learn: 46677.0896280	total: 1.78s	remaining: 3.86s
+316:	learn: 46661.1332199	total: 1.79s	remaining: 3.85s
+317:	learn: 46645.1884585	total: 1.79s	remaining: 3.84s
+318:	learn: 46609.9430355	total: 1.8s	remaining: 3.83s
+319:	learn: 46588.2426110	total: 1.8s	remaining: 3.82s
+320:	learn: 46564.5330488	total: 1.8s	remaining: 3.81s
+321:	learn: 46541.2015744	total: 1.8s	remaining: 3.8s
+322:	learn: 46514.7567915	total: 1.81s	remaining: 3.79s
+323:	learn: 46498.9256797	total: 1.81s	remaining: 3.79s
+324:	learn: 46471.9158356	total: 1.82s	remaining: 3.78s
+325:	learn: 46459.9891972	total: 1.82s	remaining: 3.77s
+326:	learn: 46434.9102718	total: 1.82s	remaining: 3.75s
+327:	learn: 46422.7573605	total: 1.83s	remaining: 3.75s
+328:	learn: 46399.5690197	total: 1.83s	remaining: 3.74s
+329:	learn: 46390.5209920	total: 1.84s	remaining: 3.73s
+330:	learn: 46370.7014563	total: 1.84s	remaining: 3.72s
+331:	learn: 46356.8594691	total: 1.84s	remaining: 3.71s
+332:	learn: 46341.2788637	total: 1.85s	remaining: 3.7s
+333:	learn: 46322.6536694	total: 1.85s	remaining: 3.69s
+334:	learn: 46307.3043031	total: 1.85s	remaining: 3.68s
+335:	learn: 46280.2037710	total: 1.86s	remaining: 3.67s
+336:	learn: 46261.6553229	total: 1.86s	remaining: 3.66s
+337:	learn: 46243.4474948	total: 1.86s	remaining: 3.65s
+338:	learn: 46220.2014412	total: 1.87s	remaining: 3.64s
+339:	learn: 46204.4685352	total: 1.87s	remaining: 3.63s
+340:	learn: 46190.7021654	total: 1.88s	remaining: 3.62s
+341:	learn: 46160.0968285	total: 1.88s	remaining: 3.62s
+342:	learn: 46141.4847519	total: 1.88s	remaining: 3.61s
+343:	learn: 46116.2031935	total: 1.89s	remaining: 3.6s
+344:	learn: 46095.3445532	total: 1.89s	remaining: 3.59s
+345:	learn: 46079.7681036	total: 1.89s	remaining: 3.58s
+346:	learn: 46059.6295528	total: 1.9s	remaining: 3.57s
+347:	learn: 46045.7845690	total: 1.9s	remaining: 3.56s
+348:	learn: 46027.3270051	total: 1.9s	remaining: 3.55s
+349:	learn: 46010.8209569	total: 1.91s	remaining: 3.54s
+350:	learn: 45989.1810901	total: 1.91s	remaining: 3.54s
+351:	learn: 45971.4891594	total: 1.92s	remaining: 3.52s
+352:	learn: 45956.3484715	total: 1.92s	remaining: 3.52s
+353:	learn: 45926.4590019	total: 1.92s	remaining: 3.51s
+354:	learn: 45902.5593506	total: 1.93s	remaining: 3.5s
+355:	learn: 45874.2864698	total: 1.93s	remaining: 3.49s
+356:	learn: 45859.7998706	total: 1.93s	remaining: 3.48s
+357:	learn: 45837.7920744	total: 1.94s	remaining: 3.48s
+358:	learn: 45820.5206940	total: 1.94s	remaining: 3.47s
+359:	learn: 45801.6753450	total: 1.95s	remaining: 3.46s
+360:	learn: 45772.7314243	total: 1.95s	remaining: 3.45s
+361:	learn: 45756.6234430	total: 1.95s	remaining: 3.44s
+362:	learn: 45726.9872991	total: 1.96s	remaining: 3.44s
+363:	learn: 45701.3806092	total: 1.96s	remaining: 3.43s
+364:	learn: 45681.6584961	total: 1.97s	remaining: 3.42s
+365:	learn: 45664.0422109	total: 1.97s	remaining: 3.42s
+366:	learn: 45642.0408417	total: 1.98s	remaining: 3.41s
+367:	learn: 45624.5128820	total: 1.98s	remaining: 3.4s
+368:	learn: 45602.5977592	total: 1.99s	remaining: 3.4s
+369:	learn: 45577.4439890	total: 1.99s	remaining: 3.39s
+370:	learn: 45550.9351529	total: 1.99s	remaining: 3.38s
+371:	learn: 45530.1115741	total: 2s	remaining: 3.37s
+372:	learn: 45504.2965519	total: 2s	remaining: 3.36s
+373:	learn: 45492.8603556	total: 2.01s	remaining: 3.36s
+374:	learn: 45484.6525793	total: 2.01s	remaining: 3.35s
+375:	learn: 45458.8284028	total: 2.01s	remaining: 3.34s
+376:	learn: 45447.0094429	total: 2.02s	remaining: 3.35s
+377:	learn: 45428.9556923	total: 2.03s	remaining: 3.34s
+378:	learn: 45417.4094426	total: 2.03s	remaining: 3.33s
+379:	learn: 45406.1191435	total: 2.03s	remaining: 3.32s
+380:	learn: 45391.9764968	total: 2.04s	remaining: 3.32s
+381:	learn: 45372.5201717	total: 2.04s	remaining: 3.31s
+382:	learn: 45360.6386906	total: 2.05s	remaining: 3.3s
+383:	learn: 45348.9086083	total: 2.05s	remaining: 3.29s
+384:	learn: 45339.8201139	total: 2.06s	remaining: 3.28s
+385:	learn: 45328.1621046	total: 2.06s	remaining: 3.27s
+386:	learn: 45313.4197631	total: 2.06s	remaining: 3.27s
+387:	learn: 45292.7786150	total: 2.06s	remaining: 3.26s
+388:	learn: 45282.1797229	total: 2.07s	remaining: 3.25s
+389:	learn: 45260.6331323	total: 2.07s	remaining: 3.24s
+390:	learn: 45251.3404065	total: 2.08s	remaining: 3.23s
+391:	learn: 45227.8324300	total: 2.08s	remaining: 3.22s
+392:	learn: 45200.0548529	total: 2.08s	remaining: 3.21s
+393:	learn: 45179.2651860	total: 2.09s	remaining: 3.21s
+394:	learn: 45169.1984286	total: 2.09s	remaining: 3.2s
+395:	learn: 45146.9034315	total: 2.09s	remaining: 3.19s
+396:	learn: 45129.9514462	total: 2.1s	remaining: 3.18s
+397:	learn: 45119.7583161	total: 2.1s	remaining: 3.17s
+398:	learn: 45101.4747288	total: 2.1s	remaining: 3.17s
+399:	learn: 45082.6520197	total: 2.11s	remaining: 3.16s
+400:	learn: 45071.2308564	total: 2.11s	remaining: 3.15s
+401:	learn: 45056.0306479	total: 2.11s	remaining: 3.14s
+402:	learn: 45040.6777824	total: 2.12s	remaining: 3.14s
+403:	learn: 45025.2162724	total: 2.12s	remaining: 3.13s
+404:	learn: 45017.6444665	total: 2.12s	remaining: 3.12s
+405:	learn: 44992.2949449	total: 2.13s	remaining: 3.11s
+406:	learn: 44970.8649014	total: 2.13s	remaining: 3.1s
+407:	learn: 44954.2735092	total: 2.14s	remaining: 3.1s
+408:	learn: 44935.9421748	total: 2.14s	remaining: 3.09s
+409:	learn: 44923.1360738	total: 2.14s	remaining: 3.08s
+410:	learn: 44899.4579236	total: 2.15s	remaining: 3.08s
+411:	learn: 44887.7163680	total: 2.15s	remaining: 3.07s
+412:	learn: 44871.1636368	total: 2.15s	remaining: 3.06s
+413:	learn: 44857.8758341	total: 2.16s	remaining: 3.06s
+414:	learn: 44838.1618702	total: 2.16s	remaining: 3.05s
+415:	learn: 44820.0763451	total: 2.17s	remaining: 3.04s
+416:	learn: 44797.2027357	total: 2.17s	remaining: 3.03s
+417:	learn: 44783.1721649	total: 2.17s	remaining: 3.02s
+418:	learn: 44771.0601367	total: 2.18s	remaining: 3.02s
+419:	learn: 44760.0854312	total: 2.18s	remaining: 3.01s
+420:	learn: 44742.5716647	total: 2.19s	remaining: 3s
+421:	learn: 44731.0692167	total: 2.19s	remaining: 3s
+422:	learn: 44714.9506442	total: 2.19s	remaining: 2.99s
+423:	learn: 44704.5886425	total: 2.19s	remaining: 2.98s
+424:	learn: 44687.9974438	total: 2.2s	remaining: 2.97s
+425:	learn: 44676.2028721	total: 2.2s	remaining: 2.97s
+426:	learn: 44660.3994584	total: 2.21s	remaining: 2.96s
+427:	learn: 44648.5169758	total: 2.21s	remaining: 2.95s
+428:	learn: 44635.0946558	total: 2.21s	remaining: 2.94s
+429:	learn: 44623.4777903	total: 2.22s	remaining: 2.94s
+430:	learn: 44611.2686546	total: 2.22s	remaining: 2.93s
+431:	learn: 44601.0139603	total: 2.22s	remaining: 2.92s
+432:	learn: 44581.4629893	total: 2.23s	remaining: 2.92s
+433:	learn: 44568.1405143	total: 2.23s	remaining: 2.91s
+434:	learn: 44544.2799183	total: 2.23s	remaining: 2.9s
+435:	learn: 44527.7314291	total: 2.24s	remaining: 2.89s
+436:	learn: 44509.2899563	total: 2.24s	remaining: 2.88s
+437:	learn: 44489.3070748	total: 2.24s	remaining: 2.88s
+438:	learn: 44473.0247466	total: 2.25s	remaining: 2.87s
+439:	learn: 44462.6304604	total: 2.25s	remaining: 2.86s
+440:	learn: 44447.7784536	total: 2.26s	remaining: 2.86s
+441:	learn: 44429.7337553	total: 2.26s	remaining: 2.86s
+442:	learn: 44417.2657805	total: 2.27s	remaining: 2.85s
+443:	learn: 44405.0629942	total: 2.27s	remaining: 2.84s
+444:	learn: 44394.1646033	total: 2.27s	remaining: 2.83s
+445:	learn: 44378.0077426	total: 2.28s	remaining: 2.83s
+446:	learn: 44354.0236990	total: 2.28s	remaining: 2.82s
+447:	learn: 44347.0131499	total: 2.29s	remaining: 2.81s
+448:	learn: 44332.8860899	total: 2.29s	remaining: 2.81s
+449:	learn: 44312.8414678	total: 2.29s	remaining: 2.8s
+450:	learn: 44305.0502640	total: 2.3s	remaining: 2.8s
+451:	learn: 44288.0435571	total: 2.3s	remaining: 2.79s
+452:	learn: 44267.1118677	total: 2.3s	remaining: 2.78s
+453:	learn: 44253.9136117	total: 2.31s	remaining: 2.77s
+454:	learn: 44229.1360359	total: 2.31s	remaining: 2.77s
+455:	learn: 44217.4144749	total: 2.31s	remaining: 2.76s
+456:	learn: 44203.8641250	total: 2.32s	remaining: 2.75s
+457:	learn: 44190.5861043	total: 2.32s	remaining: 2.75s
+458:	learn: 44178.0639063	total: 2.32s	remaining: 2.74s
+459:	learn: 44169.7552477	total: 2.33s	remaining: 2.73s
+460:	learn: 44162.0942185	total: 2.33s	remaining: 2.73s
+461:	learn: 44141.9632023	total: 2.33s	remaining: 2.72s
+462:	learn: 44130.1070143	total: 2.34s	remaining: 2.71s
+463:	learn: 44120.7981504	total: 2.34s	remaining: 2.7s
+464:	learn: 44106.3117178	total: 2.35s	remaining: 2.7s
+465:	learn: 44094.2337172	total: 2.35s	remaining: 2.69s
+466:	learn: 44085.2860370	total: 2.35s	remaining: 2.69s
+467:	learn: 44071.4034810	total: 2.36s	remaining: 2.68s
+468:	learn: 44051.0350619	total: 2.36s	remaining: 2.67s
+469:	learn: 44033.8040505	total: 2.37s	remaining: 2.67s
+470:	learn: 44022.6067417	total: 2.37s	remaining: 2.66s
+471:	learn: 44001.9407514	total: 2.37s	remaining: 2.65s
+472:	learn: 43981.8470750	total: 2.37s	remaining: 2.65s
+473:	learn: 43962.5374090	total: 2.38s	remaining: 2.64s
+474:	learn: 43955.9433483	total: 2.38s	remaining: 2.63s
+475:	learn: 43926.8194810	total: 2.38s	remaining: 2.63s
+476:	learn: 43914.7235950	total: 2.39s	remaining: 2.62s
+477:	learn: 43899.0429075	total: 2.39s	remaining: 2.61s
+478:	learn: 43887.6878169	total: 2.4s	remaining: 2.61s
+479:	learn: 43869.0572022	total: 2.4s	remaining: 2.6s
+480:	learn: 43856.1744641	total: 2.4s	remaining: 2.59s
+481:	learn: 43835.0040970	total: 2.4s	remaining: 2.58s
+482:	learn: 43809.9252601	total: 2.41s	remaining: 2.58s
+483:	learn: 43796.1778871	total: 2.41s	remaining: 2.57s
+484:	learn: 43778.5509097	total: 2.42s	remaining: 2.57s
+485:	learn: 43761.2259773	total: 2.42s	remaining: 2.56s
+486:	learn: 43745.7232320	total: 2.42s	remaining: 2.55s
+487:	learn: 43735.5418522	total: 2.43s	remaining: 2.55s
+488:	learn: 43722.8736255	total: 2.43s	remaining: 2.54s
+489:	learn: 43711.6831383	total: 2.43s	remaining: 2.53s
+490:	learn: 43703.0956310	total: 2.44s	remaining: 2.53s
+491:	learn: 43695.0822043	total: 2.44s	remaining: 2.52s
+492:	learn: 43683.2024355	total: 2.44s	remaining: 2.51s
+493:	learn: 43670.6778472	total: 2.45s	remaining: 2.51s
+494:	learn: 43658.9776650	total: 2.45s	remaining: 2.5s
+495:	learn: 43646.5312755	total: 2.45s	remaining: 2.49s
+496:	learn: 43636.6386624	total: 2.46s	remaining: 2.49s
+497:	learn: 43621.8177945	total: 2.46s	remaining: 2.48s
+498:	learn: 43603.2698330	total: 2.46s	remaining: 2.48s
+499:	learn: 43594.1618415	total: 2.47s	remaining: 2.47s
+500:	learn: 43585.5962916	total: 2.47s	remaining: 2.46s
+501:	learn: 43575.8418572	total: 2.48s	remaining: 2.46s
+502:	learn: 43563.8767086	total: 2.48s	remaining: 2.45s
+503:	learn: 43553.6725190	total: 2.48s	remaining: 2.44s
+504:	learn: 43547.3400191	total: 2.48s	remaining: 2.44s
+505:	learn: 43537.9998393	total: 2.49s	remaining: 2.43s
+506:	learn: 43526.1703755	total: 2.49s	remaining: 2.42s
+507:	learn: 43517.0689100	total: 2.5s	remaining: 2.42s
+508:	learn: 43505.0366228	total: 2.5s	remaining: 2.41s
+509:	learn: 43496.8754806	total: 2.5s	remaining: 2.4s
+510:	learn: 43487.0420861	total: 2.51s	remaining: 2.4s
+511:	learn: 43474.8880142	total: 2.51s	remaining: 2.39s
+512:	learn: 43459.9183198	total: 2.52s	remaining: 2.39s
+513:	learn: 43442.7928616	total: 2.52s	remaining: 2.38s
+514:	learn: 43434.0924487	total: 2.52s	remaining: 2.38s
+515:	learn: 43419.0006207	total: 2.53s	remaining: 2.37s
+516:	learn: 43411.1418897	total: 2.53s	remaining: 2.36s
+517:	learn: 43397.6633424	total: 2.53s	remaining: 2.36s
+518:	learn: 43386.0898654	total: 2.54s	remaining: 2.35s
+519:	learn: 43372.8744838	total: 2.54s	remaining: 2.35s
+520:	learn: 43357.5890394	total: 2.54s	remaining: 2.34s
+521:	learn: 43344.7628027	total: 2.55s	remaining: 2.33s
+522:	learn: 43336.3627033	total: 2.55s	remaining: 2.33s
+523:	learn: 43326.7998488	total: 2.56s	remaining: 2.32s
+524:	learn: 43312.6944955	total: 2.56s	remaining: 2.31s
+525:	learn: 43304.0006621	total: 2.56s	remaining: 2.31s
+526:	learn: 43291.1669668	total: 2.57s	remaining: 2.3s
+527:	learn: 43282.0567354	total: 2.57s	remaining: 2.3s
+528:	learn: 43269.1162804	total: 2.58s	remaining: 2.3s
+529:	learn: 43252.9859676	total: 2.6s	remaining: 2.31s
+530:	learn: 43237.8654617	total: 2.6s	remaining: 2.3s
+531:	learn: 43225.7878700	total: 2.61s	remaining: 2.3s
+532:	learn: 43211.9084524	total: 2.62s	remaining: 2.29s
+533:	learn: 43195.2202776	total: 2.62s	remaining: 2.29s
+534:	learn: 43189.9097761	total: 2.62s	remaining: 2.28s
+535:	learn: 43168.3312084	total: 2.63s	remaining: 2.28s
+536:	learn: 43154.7733938	total: 2.63s	remaining: 2.27s
+537:	learn: 43138.7866339	total: 2.64s	remaining: 2.27s
+538:	learn: 43118.9221266	total: 2.64s	remaining: 2.26s
+539:	learn: 43107.1221091	total: 2.64s	remaining: 2.25s
+540:	learn: 43099.1035344	total: 2.65s	remaining: 2.25s
+541:	learn: 43080.2033670	total: 2.65s	remaining: 2.24s
+542:	learn: 43064.9631366	total: 2.66s	remaining: 2.24s
+543:	learn: 43056.7055197	total: 2.66s	remaining: 2.23s
+544:	learn: 43046.9594226	total: 2.66s	remaining: 2.22s
+545:	learn: 43035.6202108	total: 2.67s	remaining: 2.22s
+546:	learn: 43021.8763733	total: 2.67s	remaining: 2.21s
+547:	learn: 43014.6101708	total: 2.67s	remaining: 2.21s
+548:	learn: 43000.8541354	total: 2.68s	remaining: 2.2s
+549:	learn: 42992.7766228	total: 2.68s	remaining: 2.19s
+550:	learn: 42978.6175640	total: 2.69s	remaining: 2.19s
+551:	learn: 42968.9341753	total: 2.69s	remaining: 2.18s
+552:	learn: 42955.6276798	total: 2.7s	remaining: 2.18s
+553:	learn: 42941.1891069	total: 2.7s	remaining: 2.17s
+554:	learn: 42938.1436908	total: 2.71s	remaining: 2.17s
+555:	learn: 42926.5928532	total: 2.71s	remaining: 2.16s
+556:	learn: 42911.6684956	total: 2.71s	remaining: 2.16s
+557:	learn: 42895.5190790	total: 2.72s	remaining: 2.15s
+558:	learn: 42880.2754843	total: 2.72s	remaining: 2.15s
+559:	learn: 42860.7631319	total: 2.73s	remaining: 2.14s
+560:	learn: 42854.2293723	total: 2.73s	remaining: 2.14s
+561:	learn: 42838.6941415	total: 2.74s	remaining: 2.13s
+562:	learn: 42829.5919850	total: 2.74s	remaining: 2.13s
+563:	learn: 42822.8040510	total: 2.74s	remaining: 2.12s
+564:	learn: 42812.8849433	total: 2.75s	remaining: 2.12s
+565:	learn: 42804.4438823	total: 2.75s	remaining: 2.11s
+566:	learn: 42790.3574494	total: 2.75s	remaining: 2.1s
+567:	learn: 42780.7708625	total: 2.75s	remaining: 2.1s
+568:	learn: 42763.7630921	total: 2.76s	remaining: 2.09s
+569:	learn: 42752.5829731	total: 2.76s	remaining: 2.08s
+570:	learn: 42738.5872810	total: 2.77s	remaining: 2.08s
+571:	learn: 42722.2860438	total: 2.77s	remaining: 2.07s
+572:	learn: 42709.0680003	total: 2.77s	remaining: 2.07s
+573:	learn: 42698.5758799	total: 2.77s	remaining: 2.06s
+574:	learn: 42690.0909288	total: 2.78s	remaining: 2.05s
+575:	learn: 42677.8963605	total: 2.78s	remaining: 2.05s
+576:	learn: 42664.2967609	total: 2.79s	remaining: 2.04s
+577:	learn: 42657.7342590	total: 2.79s	remaining: 2.04s
+578:	learn: 42643.9329015	total: 2.79s	remaining: 2.03s
+579:	learn: 42629.3041446	total: 2.8s	remaining: 2.03s
+580:	learn: 42613.6090622	total: 2.8s	remaining: 2.02s
+581:	learn: 42603.4445959	total: 2.81s	remaining: 2.02s
+582:	learn: 42592.3956384	total: 2.81s	remaining: 2.01s
+583:	learn: 42582.9750602	total: 2.81s	remaining: 2s
+584:	learn: 42575.9078877	total: 2.82s	remaining: 2s
+585:	learn: 42568.2689626	total: 2.82s	remaining: 1.99s
+586:	learn: 42556.7685680	total: 2.83s	remaining: 1.99s
+587:	learn: 42545.6229072	total: 2.83s	remaining: 1.98s
+588:	learn: 42537.4049392	total: 2.83s	remaining: 1.98s
+589:	learn: 42527.7497687	total: 2.84s	remaining: 1.97s
+590:	learn: 42519.5963840	total: 2.85s	remaining: 1.97s
+591:	learn: 42506.4458230	total: 2.85s	remaining: 1.96s
+592:	learn: 42498.2855999	total: 2.85s	remaining: 1.96s
+593:	learn: 42490.3542318	total: 2.86s	remaining: 1.95s
+594:	learn: 42486.4067101	total: 2.86s	remaining: 1.95s
+595:	learn: 42478.8991060	total: 2.87s	remaining: 1.95s
+596:	learn: 42472.9570784	total: 2.88s	remaining: 1.94s
+597:	learn: 42467.2031052	total: 2.88s	remaining: 1.94s
+598:	learn: 42464.2489295	total: 2.89s	remaining: 1.94s
+599:	learn: 42449.5003195	total: 2.9s	remaining: 1.93s
+600:	learn: 42439.9300425	total: 2.91s	remaining: 1.93s
+601:	learn: 42428.2885125	total: 2.92s	remaining: 1.93s
+602:	learn: 42420.3690886	total: 2.92s	remaining: 1.93s
+603:	learn: 42408.0203803	total: 2.93s	remaining: 1.92s
+604:	learn: 42396.5342755	total: 2.94s	remaining: 1.92s
+605:	learn: 42384.2332824	total: 2.94s	remaining: 1.91s
+606:	learn: 42374.3937331	total: 2.95s	remaining: 1.91s
+607:	learn: 42368.6687839	total: 2.95s	remaining: 1.9s
+608:	learn: 42359.0841652	total: 2.96s	remaining: 1.9s
+609:	learn: 42344.7047666	total: 2.96s	remaining: 1.89s
+610:	learn: 42337.2711729	total: 2.96s	remaining: 1.89s
+611:	learn: 42322.1153236	total: 2.97s	remaining: 1.88s
+612:	learn: 42310.0927981	total: 2.97s	remaining: 1.88s
+613:	learn: 42302.6368692	total: 2.98s	remaining: 1.87s
+614:	learn: 42296.4412048	total: 2.98s	remaining: 1.87s
+615:	learn: 42280.5042875	total: 2.99s	remaining: 1.86s
+616:	learn: 42264.9837154	total: 2.99s	remaining: 1.86s
+617:	learn: 42257.2051391	total: 3s	remaining: 1.85s
+618:	learn: 42250.1104964	total: 3s	remaining: 1.84s
+619:	learn: 42240.7512215	total: 3s	remaining: 1.84s
+620:	learn: 42234.7360472	total: 3s	remaining: 1.83s
+621:	learn: 42222.7171209	total: 3.01s	remaining: 1.83s
+622:	learn: 42215.9904149	total: 3.01s	remaining: 1.82s
+623:	learn: 42207.0435275	total: 3.02s	remaining: 1.82s
+624:	learn: 42191.6911776	total: 3.02s	remaining: 1.81s
+625:	learn: 42181.4943674	total: 3.02s	remaining: 1.81s
+626:	learn: 42171.4613097	total: 3.03s	remaining: 1.8s
+627:	learn: 42162.5968145	total: 3.03s	remaining: 1.79s
+628:	learn: 42157.1036751	total: 3.03s	remaining: 1.79s
+629:	learn: 42150.0772244	total: 3.04s	remaining: 1.78s
+630:	learn: 42136.4269031	total: 3.04s	remaining: 1.78s
+631:	learn: 42121.9150439	total: 3.04s	remaining: 1.77s
+632:	learn: 42111.1334274	total: 3.05s	remaining: 1.77s
+633:	learn: 42095.8980309	total: 3.05s	remaining: 1.76s
+634:	learn: 42073.3125996	total: 3.05s	remaining: 1.75s
+635:	learn: 42060.9874449	total: 3.06s	remaining: 1.75s
+636:	learn: 42053.1235504	total: 3.06s	remaining: 1.74s
+637:	learn: 42049.6791916	total: 3.06s	remaining: 1.74s
+638:	learn: 42039.2133971	total: 3.07s	remaining: 1.73s
+639:	learn: 42032.0603115	total: 3.07s	remaining: 1.73s
+640:	learn: 42020.1063127	total: 3.07s	remaining: 1.72s
+641:	learn: 42015.2075820	total: 3.08s	remaining: 1.71s
+642:	learn: 42002.2610539	total: 3.08s	remaining: 1.71s
+643:	learn: 41998.0953056	total: 3.08s	remaining: 1.7s
+644:	learn: 41992.4161804	total: 3.09s	remaining: 1.7s
+645:	learn: 41988.1688326	total: 3.09s	remaining: 1.69s
+646:	learn: 41976.8709540	total: 3.09s	remaining: 1.69s
+647:	learn: 41970.4771665	total: 3.1s	remaining: 1.68s
+648:	learn: 41957.3863757	total: 3.1s	remaining: 1.68s
+649:	learn: 41951.6211175	total: 3.1s	remaining: 1.67s
+650:	learn: 41940.9485779	total: 3.11s	remaining: 1.67s
+651:	learn: 41926.4617459	total: 3.11s	remaining: 1.66s
+652:	learn: 41920.4581844	total: 3.11s	remaining: 1.65s
+653:	learn: 41911.7212624	total: 3.12s	remaining: 1.65s
+654:	learn: 41905.5652254	total: 3.12s	remaining: 1.64s
+655:	learn: 41895.2442769	total: 3.13s	remaining: 1.64s
+656:	learn: 41873.5475486	total: 3.13s	remaining: 1.63s
+657:	learn: 41865.3256796	total: 3.13s	remaining: 1.63s
+658:	learn: 41855.7656629	total: 3.14s	remaining: 1.62s
+659:	learn: 41843.9381980	total: 3.14s	remaining: 1.62s
+660:	learn: 41832.8187830	total: 3.14s	remaining: 1.61s
+661:	learn: 41822.5310837	total: 3.15s	remaining: 1.61s
+662:	learn: 41815.0386063	total: 3.15s	remaining: 1.6s
+663:	learn: 41809.2141600	total: 3.15s	remaining: 1.59s
+664:	learn: 41797.9083094	total: 3.15s	remaining: 1.59s
+665:	learn: 41785.0682615	total: 3.16s	remaining: 1.58s
+666:	learn: 41771.0910416	total: 3.16s	remaining: 1.58s
+667:	learn: 41764.9265466	total: 3.16s	remaining: 1.57s
+668:	learn: 41760.2577607	total: 3.17s	remaining: 1.57s
+669:	learn: 41749.9376734	total: 3.17s	remaining: 1.56s
+670:	learn: 41739.4297146	total: 3.17s	remaining: 1.56s
+671:	learn: 41726.7340870	total: 3.18s	remaining: 1.55s
+672:	learn: 41710.7813094	total: 3.18s	remaining: 1.54s
+673:	learn: 41698.5104126	total: 3.18s	remaining: 1.54s
+674:	learn: 41689.5333409	total: 3.19s	remaining: 1.53s
+675:	learn: 41679.7543258	total: 3.19s	remaining: 1.53s
+676:	learn: 41672.0662522	total: 3.19s	remaining: 1.52s
+677:	learn: 41664.9167375	total: 3.19s	remaining: 1.52s
+678:	learn: 41655.4753335	total: 3.2s	remaining: 1.51s
+679:	learn: 41643.1962859	total: 3.2s	remaining: 1.51s
+680:	learn: 41634.8245179	total: 3.2s	remaining: 1.5s
+681:	learn: 41629.5610017	total: 3.21s	remaining: 1.5s
+682:	learn: 41623.5068206	total: 3.21s	remaining: 1.49s
+683:	learn: 41617.1401172	total: 3.21s	remaining: 1.48s
+684:	learn: 41608.7642319	total: 3.22s	remaining: 1.48s
+685:	learn: 41602.2612630	total: 3.22s	remaining: 1.47s
+686:	learn: 41591.7966987	total: 3.22s	remaining: 1.47s
+687:	learn: 41582.1619895	total: 3.23s	remaining: 1.46s
+688:	learn: 41575.6426028	total: 3.23s	remaining: 1.46s
+689:	learn: 41565.4114297	total: 3.23s	remaining: 1.45s
+690:	learn: 41555.1666131	total: 3.23s	remaining: 1.45s
+691:	learn: 41550.5218891	total: 3.24s	remaining: 1.44s
+692:	learn: 41539.1182199	total: 3.24s	remaining: 1.44s
+693:	learn: 41525.5201108	total: 3.24s	remaining: 1.43s
+694:	learn: 41520.7719751	total: 3.25s	remaining: 1.42s
+695:	learn: 41512.9001104	total: 3.25s	remaining: 1.42s
+696:	learn: 41504.6688069	total: 3.25s	remaining: 1.41s
+697:	learn: 41500.2535691	total: 3.26s	remaining: 1.41s
+698:	learn: 41487.2352363	total: 3.26s	remaining: 1.4s
+699:	learn: 41478.5838714	total: 3.26s	remaining: 1.4s
+700:	learn: 41470.7547444	total: 3.27s	remaining: 1.39s
+701:	learn: 41464.7456549	total: 3.27s	remaining: 1.39s
+702:	learn: 41457.7939768	total: 3.27s	remaining: 1.38s
+703:	learn: 41446.1650117	total: 3.27s	remaining: 1.38s
+704:	learn: 41437.5605614	total: 3.28s	remaining: 1.37s
+705:	learn: 41428.7532764	total: 3.28s	remaining: 1.37s
+706:	learn: 41420.6868040	total: 3.29s	remaining: 1.36s
+707:	learn: 41413.7764620	total: 3.29s	remaining: 1.36s
+708:	learn: 41401.8207634	total: 3.29s	remaining: 1.35s
+709:	learn: 41396.2244288	total: 3.3s	remaining: 1.35s
+710:	learn: 41388.8266822	total: 3.3s	remaining: 1.34s
+711:	learn: 41378.4792631	total: 3.3s	remaining: 1.34s
+712:	learn: 41370.7693943	total: 3.31s	remaining: 1.33s
+713:	learn: 41361.7335317	total: 3.31s	remaining: 1.32s
+714:	learn: 41353.3201405	total: 3.31s	remaining: 1.32s
+715:	learn: 41345.9111137	total: 3.31s	remaining: 1.31s
+716:	learn: 41339.7640061	total: 3.32s	remaining: 1.31s
+717:	learn: 41333.3856836	total: 3.32s	remaining: 1.3s
+718:	learn: 41324.3405513	total: 3.32s	remaining: 1.3s
+719:	learn: 41320.0384665	total: 3.33s	remaining: 1.29s
+720:	learn: 41313.4314055	total: 3.33s	remaining: 1.29s
+721:	learn: 41301.0111622	total: 3.33s	remaining: 1.28s
+722:	learn: 41285.2354711	total: 3.34s	remaining: 1.28s
+723:	learn: 41279.2932737	total: 3.34s	remaining: 1.27s
+724:	learn: 41271.4688471	total: 3.34s	remaining: 1.27s
+725:	learn: 41260.5404139	total: 3.35s	remaining: 1.26s
+726:	learn: 41249.9094676	total: 3.35s	remaining: 1.26s
+727:	learn: 41233.8011183	total: 3.35s	remaining: 1.25s
+728:	learn: 41226.1221931	total: 3.35s	remaining: 1.25s
+729:	learn: 41218.9318679	total: 3.36s	remaining: 1.24s
+730:	learn: 41211.6899895	total: 3.36s	remaining: 1.24s
+731:	learn: 41194.9670625	total: 3.37s	remaining: 1.23s
+732:	learn: 41184.3619714	total: 3.37s	remaining: 1.23s
+733:	learn: 41173.3962586	total: 3.38s	remaining: 1.22s
+734:	learn: 41163.9736222	total: 3.38s	remaining: 1.22s
+735:	learn: 41153.9949615	total: 3.38s	remaining: 1.21s
+736:	learn: 41149.3771913	total: 3.38s	remaining: 1.21s
+737:	learn: 41138.3642264	total: 3.39s	remaining: 1.2s
+738:	learn: 41127.3061008	total: 3.39s	remaining: 1.2s
+739:	learn: 41118.9351329	total: 3.39s	remaining: 1.19s
+740:	learn: 41112.7282075	total: 3.4s	remaining: 1.19s
+741:	learn: 41106.0589581	total: 3.4s	remaining: 1.18s
+742:	learn: 41098.2317010	total: 3.4s	remaining: 1.18s
+743:	learn: 41091.7403207	total: 3.4s	remaining: 1.17s
+744:	learn: 41084.6790512	total: 3.41s	remaining: 1.17s
+745:	learn: 41072.8238913	total: 3.41s	remaining: 1.16s
+746:	learn: 41069.4434031	total: 3.42s	remaining: 1.16s
+747:	learn: 41054.7924255	total: 3.42s	remaining: 1.15s
+748:	learn: 41047.3915956	total: 3.42s	remaining: 1.15s
+749:	learn: 41039.1002074	total: 3.42s	remaining: 1.14s
+750:	learn: 41032.6098568	total: 3.43s	remaining: 1.14s
+751:	learn: 41019.4131834	total: 3.43s	remaining: 1.13s
+752:	learn: 41013.1445172	total: 3.43s	remaining: 1.13s
+753:	learn: 41002.1759060	total: 3.44s	remaining: 1.12s
+754:	learn: 40998.1098984	total: 3.44s	remaining: 1.12s
+755:	learn: 40993.3758367	total: 3.44s	remaining: 1.11s
+756:	learn: 40988.0518356	total: 3.45s	remaining: 1.11s
+757:	learn: 40982.6280709	total: 3.45s	remaining: 1.1s
+758:	learn: 40962.9643030	total: 3.45s	remaining: 1.1s
+759:	learn: 40957.2512184	total: 3.46s	remaining: 1.09s
+760:	learn: 40947.7903761	total: 3.46s	remaining: 1.09s
+761:	learn: 40940.2969766	total: 3.46s	remaining: 1.08s
+762:	learn: 40933.5849439	total: 3.46s	remaining: 1.08s
+763:	learn: 40929.5424033	total: 3.47s	remaining: 1.07s
+764:	learn: 40919.6577211	total: 3.47s	remaining: 1.07s
+765:	learn: 40910.8848585	total: 3.48s	remaining: 1.06s
+766:	learn: 40895.3862534	total: 3.48s	remaining: 1.06s
+767:	learn: 40888.5553811	total: 3.48s	remaining: 1.05s
+768:	learn: 40882.2848250	total: 3.49s	remaining: 1.05s
+769:	learn: 40878.5584603	total: 3.49s	remaining: 1.04s
+770:	learn: 40870.5508322	total: 3.49s	remaining: 1.04s
+771:	learn: 40863.6280956	total: 3.5s	remaining: 1.03s
+772:	learn: 40852.2283141	total: 3.5s	remaining: 1.03s
+773:	learn: 40848.9630187	total: 3.5s	remaining: 1.02s
+774:	learn: 40835.5420468	total: 3.5s	remaining: 1.02s
+775:	learn: 40828.7043541	total: 3.51s	remaining: 1.01s
+776:	learn: 40820.0738725	total: 3.51s	remaining: 1.01s
+777:	learn: 40808.6319742	total: 3.52s	remaining: 1s
+778:	learn: 40797.8816685	total: 3.52s	remaining: 999ms
+779:	learn: 40791.9578114	total: 3.52s	remaining: 994ms
+780:	learn: 40785.6348823	total: 3.53s	remaining: 989ms
+781:	learn: 40779.4803919	total: 3.53s	remaining: 984ms
+782:	learn: 40768.3231602	total: 3.53s	remaining: 979ms
+783:	learn: 40762.9400472	total: 3.54s	remaining: 974ms
+784:	learn: 40755.8448123	total: 3.54s	remaining: 969ms
+785:	learn: 40748.6107000	total: 3.54s	remaining: 964ms
+786:	learn: 40734.3502055	total: 3.54s	remaining: 959ms
+787:	learn: 40729.0691451	total: 3.55s	remaining: 955ms
+788:	learn: 40723.8031059	total: 3.55s	remaining: 950ms
+789:	learn: 40719.3692224	total: 3.55s	remaining: 945ms
+790:	learn: 40711.6895783	total: 3.56s	remaining: 940ms
+791:	learn: 40707.2060341	total: 3.56s	remaining: 935ms
+792:	learn: 40702.2868470	total: 3.56s	remaining: 930ms
+793:	learn: 40690.3305364	total: 3.57s	remaining: 925ms
+794:	learn: 40678.7477449	total: 3.57s	remaining: 920ms
+795:	learn: 40666.7763611	total: 3.57s	remaining: 916ms
+796:	learn: 40661.0767787	total: 3.58s	remaining: 911ms
+797:	learn: 40649.6944637	total: 3.58s	remaining: 906ms
+798:	learn: 40636.8959938	total: 3.58s	remaining: 901ms
+799:	learn: 40621.6161344	total: 3.59s	remaining: 897ms
+800:	learn: 40613.8539295	total: 3.59s	remaining: 893ms
+801:	learn: 40601.6626112	total: 3.6s	remaining: 888ms
+802:	learn: 40588.0976597	total: 3.6s	remaining: 883ms
+803:	learn: 40569.5609090	total: 3.6s	remaining: 878ms
+804:	learn: 40562.3511762	total: 3.6s	remaining: 873ms
+805:	learn: 40558.8954282	total: 3.61s	remaining: 868ms
+806:	learn: 40548.3954488	total: 3.61s	remaining: 864ms
+807:	learn: 40543.1734041	total: 3.61s	remaining: 859ms
+808:	learn: 40536.7026638	total: 3.62s	remaining: 854ms
+809:	learn: 40531.5696049	total: 3.62s	remaining: 849ms
+810:	learn: 40521.3482361	total: 3.62s	remaining: 844ms
+811:	learn: 40513.1303267	total: 3.63s	remaining: 839ms
+812:	learn: 40504.5751843	total: 3.63s	remaining: 835ms
+813:	learn: 40500.4753510	total: 3.63s	remaining: 830ms
+814:	learn: 40492.1640216	total: 3.63s	remaining: 825ms
+815:	learn: 40479.5049033	total: 3.64s	remaining: 820ms
+816:	learn: 40473.9478200	total: 3.64s	remaining: 815ms
+817:	learn: 40465.7928503	total: 3.64s	remaining: 811ms
+818:	learn: 40456.4790635	total: 3.65s	remaining: 806ms
+819:	learn: 40449.6004183	total: 3.65s	remaining: 801ms
+820:	learn: 40434.9758015	total: 3.65s	remaining: 796ms
+821:	learn: 40431.9954343	total: 3.65s	remaining: 792ms
+822:	learn: 40425.3335047	total: 3.66s	remaining: 787ms
+823:	learn: 40415.2505407	total: 3.66s	remaining: 782ms
+824:	learn: 40409.8274344	total: 3.67s	remaining: 778ms
+825:	learn: 40401.4920633	total: 3.67s	remaining: 773ms
+826:	learn: 40395.4728521	total: 3.67s	remaining: 768ms
+827:	learn: 40387.9815855	total: 3.68s	remaining: 764ms
+828:	learn: 40380.8376354	total: 3.68s	remaining: 759ms
+829:	learn: 40374.5112126	total: 3.68s	remaining: 754ms
+830:	learn: 40368.0489744	total: 3.69s	remaining: 750ms
+831:	learn: 40354.2784809	total: 3.69s	remaining: 745ms
+832:	learn: 40346.1848666	total: 3.69s	remaining: 740ms
+833:	learn: 40339.6833261	total: 3.69s	remaining: 735ms
+834:	learn: 40333.6937702	total: 3.7s	remaining: 731ms
+835:	learn: 40318.1212114	total: 3.7s	remaining: 726ms
+836:	learn: 40310.9107148	total: 3.7s	remaining: 721ms
+837:	learn: 40308.9183856	total: 3.71s	remaining: 717ms
+838:	learn: 40304.9822812	total: 3.71s	remaining: 712ms
+839:	learn: 40299.7265027	total: 3.71s	remaining: 707ms
+840:	learn: 40291.9561320	total: 3.72s	remaining: 703ms
+841:	learn: 40281.7121110	total: 3.72s	remaining: 698ms
+842:	learn: 40268.9292849	total: 3.72s	remaining: 693ms
+843:	learn: 40263.0596376	total: 3.72s	remaining: 688ms
+844:	learn: 40252.4065647	total: 3.73s	remaining: 684ms
+845:	learn: 40243.2691527	total: 3.73s	remaining: 679ms
+846:	learn: 40240.7343353	total: 3.73s	remaining: 675ms
+847:	learn: 40228.6072429	total: 3.74s	remaining: 670ms
+848:	learn: 40212.0744335	total: 3.74s	remaining: 665ms
+849:	learn: 40208.0128444	total: 3.74s	remaining: 661ms
+850:	learn: 40196.6857956	total: 3.75s	remaining: 656ms
+851:	learn: 40190.1669307	total: 3.75s	remaining: 651ms
+852:	learn: 40177.9953443	total: 3.75s	remaining: 647ms
+853:	learn: 40172.2769419	total: 3.76s	remaining: 642ms
+854:	learn: 40165.7605296	total: 3.76s	remaining: 637ms
+855:	learn: 40161.3316279	total: 3.76s	remaining: 633ms
+856:	learn: 40149.0865683	total: 3.77s	remaining: 628ms
+857:	learn: 40141.9419241	total: 3.77s	remaining: 624ms
+858:	learn: 40134.0548821	total: 3.77s	remaining: 619ms
+859:	learn: 40129.1087354	total: 3.78s	remaining: 615ms
+860:	learn: 40122.5121145	total: 3.78s	remaining: 611ms
+861:	learn: 40114.0431917	total: 3.79s	remaining: 606ms
+862:	learn: 40108.7263945	total: 3.79s	remaining: 602ms
+863:	learn: 40103.0370448	total: 3.79s	remaining: 597ms
+864:	learn: 40093.0946878	total: 3.8s	remaining: 593ms
+865:	learn: 40080.4180425	total: 3.8s	remaining: 588ms
+866:	learn: 40074.2029000	total: 3.8s	remaining: 583ms
+867:	learn: 40068.1255210	total: 3.81s	remaining: 579ms
+868:	learn: 40059.7191539	total: 3.81s	remaining: 574ms
+869:	learn: 40055.0320928	total: 3.81s	remaining: 570ms
+870:	learn: 40039.2807600	total: 3.81s	remaining: 565ms
+871:	learn: 40036.2255079	total: 3.82s	remaining: 560ms
+872:	learn: 40029.5507803	total: 3.82s	remaining: 556ms
+873:	learn: 40018.0473357	total: 3.82s	remaining: 551ms
+874:	learn: 40010.0756651	total: 3.83s	remaining: 547ms
+875:	learn: 39999.0838390	total: 3.83s	remaining: 542ms
+876:	learn: 39990.1196442	total: 3.83s	remaining: 538ms
+877:	learn: 39988.4424137	total: 3.83s	remaining: 533ms
+878:	learn: 39979.3110363	total: 3.84s	remaining: 528ms
+879:	learn: 39972.4096523	total: 3.84s	remaining: 524ms
+880:	learn: 39968.6694015	total: 3.85s	remaining: 519ms
+881:	learn: 39958.9748693	total: 3.85s	remaining: 515ms
+882:	learn: 39953.4936567	total: 3.85s	remaining: 510ms
+883:	learn: 39949.6020180	total: 3.85s	remaining: 506ms
+884:	learn: 39940.4394115	total: 3.86s	remaining: 501ms
+885:	learn: 39932.2721575	total: 3.86s	remaining: 497ms
+886:	learn: 39927.4101046	total: 3.86s	remaining: 492ms
+887:	learn: 39913.5654271	total: 3.87s	remaining: 488ms
+888:	learn: 39901.9951208	total: 3.87s	remaining: 483ms
+889:	learn: 39897.7945941	total: 3.87s	remaining: 479ms
+890:	learn: 39891.0591732	total: 3.88s	remaining: 474ms
+891:	learn: 39885.5839954	total: 3.88s	remaining: 470ms
+892:	learn: 39876.4492356	total: 3.88s	remaining: 466ms
+893:	learn: 39867.1928589	total: 3.89s	remaining: 461ms
+894:	learn: 39858.3518622	total: 3.9s	remaining: 457ms
+895:	learn: 39843.7474157	total: 3.9s	remaining: 453ms
+896:	learn: 39838.7697085	total: 3.9s	remaining: 448ms
+897:	learn: 39835.4172987	total: 3.9s	remaining: 444ms
+898:	learn: 39830.0813313	total: 3.91s	remaining: 439ms
+899:	learn: 39824.4551137	total: 3.91s	remaining: 435ms
+900:	learn: 39816.6110211	total: 3.92s	remaining: 430ms
+901:	learn: 39801.4297688	total: 3.92s	remaining: 426ms
+902:	learn: 39797.4803533	total: 3.92s	remaining: 422ms
+903:	learn: 39788.8717624	total: 3.93s	remaining: 417ms
+904:	learn: 39784.6350354	total: 3.93s	remaining: 413ms
+905:	learn: 39777.1905657	total: 3.93s	remaining: 408ms
+906:	learn: 39763.4403565	total: 3.94s	remaining: 404ms
+907:	learn: 39757.6530322	total: 3.94s	remaining: 399ms
+908:	learn: 39750.1933492	total: 3.94s	remaining: 395ms
+909:	learn: 39743.2242654	total: 3.95s	remaining: 391ms
+910:	learn: 39735.2098575	total: 3.95s	remaining: 386ms
+911:	learn: 39725.4382673	total: 3.96s	remaining: 382ms
+912:	learn: 39717.3610497	total: 3.96s	remaining: 378ms
+913:	learn: 39709.3764652	total: 3.96s	remaining: 373ms
+914:	learn: 39701.4980587	total: 3.97s	remaining: 369ms
+915:	learn: 39697.0672767	total: 3.97s	remaining: 364ms
+916:	learn: 39693.3888136	total: 3.98s	remaining: 360ms
+917:	learn: 39684.8419625	total: 3.98s	remaining: 356ms
+918:	learn: 39679.5111254	total: 3.98s	remaining: 351ms
+919:	learn: 39661.8619364	total: 3.99s	remaining: 347ms
+920:	learn: 39649.5634438	total: 3.99s	remaining: 342ms
+921:	learn: 39644.8540364	total: 4s	remaining: 338ms
+922:	learn: 39642.4590125	total: 4s	remaining: 334ms
+923:	learn: 39635.0813026	total: 4s	remaining: 329ms
+924:	learn: 39628.6916318	total: 4s	remaining: 325ms
+925:	learn: 39623.6289700	total: 4.01s	remaining: 320ms
+926:	learn: 39614.1007335	total: 4.01s	remaining: 316ms
+927:	learn: 39604.8462801	total: 4.01s	remaining: 311ms
+928:	learn: 39596.8144634	total: 4.02s	remaining: 307ms
+929:	learn: 39585.6312508	total: 4.02s	remaining: 303ms
+930:	learn: 39580.6701909	total: 4.02s	remaining: 298ms
+931:	learn: 39576.2531754	total: 4.03s	remaining: 294ms
+932:	learn: 39566.1403166	total: 4.03s	remaining: 289ms
+933:	learn: 39557.9103243	total: 4.03s	remaining: 285ms
+934:	learn: 39552.2702322	total: 4.03s	remaining: 280ms
+935:	learn: 39541.0558595	total: 4.04s	remaining: 276ms
+936:	learn: 39529.7535915	total: 4.04s	remaining: 272ms
+937:	learn: 39521.7766238	total: 4.04s	remaining: 267ms
+938:	learn: 39516.2443155	total: 4.05s	remaining: 263ms
+939:	learn: 39508.2798055	total: 4.05s	remaining: 258ms
+940:	learn: 39499.3664107	total: 4.05s	remaining: 254ms
+941:	learn: 39486.5906637	total: 4.06s	remaining: 250ms
+942:	learn: 39482.6869520	total: 4.06s	remaining: 245ms
+943:	learn: 39479.5701306	total: 4.06s	remaining: 241ms
+944:	learn: 39469.9390067	total: 4.07s	remaining: 237ms
+945:	learn: 39463.4016918	total: 4.07s	remaining: 232ms
+946:	learn: 39452.5853754	total: 4.07s	remaining: 228ms
+947:	learn: 39449.5394945	total: 4.08s	remaining: 224ms
+948:	learn: 39441.9354589	total: 4.08s	remaining: 219ms
+949:	learn: 39436.8906926	total: 4.09s	remaining: 215ms
+950:	learn: 39429.5619192	total: 4.09s	remaining: 211ms
+951:	learn: 39421.5026552	total: 4.09s	remaining: 206ms
+952:	learn: 39417.4699338	total: 4.09s	remaining: 202ms
+953:	learn: 39409.3193594	total: 4.1s	remaining: 198ms
+954:	learn: 39400.1497162	total: 4.1s	remaining: 193ms
+955:	learn: 39390.9214995	total: 4.11s	remaining: 189ms
+956:	learn: 39385.6252517	total: 4.11s	remaining: 185ms
+957:	learn: 39379.0743735	total: 4.11s	remaining: 180ms
+958:	learn: 39370.5995779	total: 4.11s	remaining: 176ms
+959:	learn: 39367.0821445	total: 4.12s	remaining: 172ms
+960:	learn: 39358.4937159	total: 4.12s	remaining: 167ms
+961:	learn: 39355.9702273	total: 4.13s	remaining: 163ms
+962:	learn: 39351.6502244	total: 4.13s	remaining: 159ms
+963:	learn: 39347.1263315	total: 4.13s	remaining: 154ms
+964:	learn: 39336.0342297	total: 4.14s	remaining: 150ms
+965:	learn: 39326.0686095	total: 4.14s	remaining: 146ms
+966:	learn: 39314.5026396	total: 4.14s	remaining: 141ms
+967:	learn: 39309.1306666	total: 4.14s	remaining: 137ms
+968:	learn: 39302.6450623	total: 4.15s	remaining: 133ms
+969:	learn: 39297.3846714	total: 4.16s	remaining: 129ms
+970:	learn: 39283.8630673	total: 4.16s	remaining: 124ms
+971:	learn: 39269.6192915	total: 4.16s	remaining: 120ms
+972:	learn: 39261.5478116	total: 4.17s	remaining: 116ms
+973:	learn: 39253.2032776	total: 4.17s	remaining: 111ms
+974:	learn: 39236.8936936	total: 4.17s	remaining: 107ms
+975:	learn: 39226.0719077	total: 4.18s	remaining: 103ms
+976:	learn: 39213.5503340	total: 4.18s	remaining: 98.4ms
+977:	learn: 39200.6482374	total: 4.18s	remaining: 94.1ms
+978:	learn: 39189.5983557	total: 4.19s	remaining: 89.8ms
+979:	learn: 39180.1641753	total: 4.19s	remaining: 85.5ms
+980:	learn: 39175.7822362	total: 4.19s	remaining: 81.2ms
+981:	learn: 39168.9997684	total: 4.2s	remaining: 77ms
+982:	learn: 39162.8246388	total: 4.2s	remaining: 72.7ms
+983:	learn: 39155.5293345	total: 4.21s	remaining: 68.4ms
+984:	learn: 39151.1471847	total: 4.21s	remaining: 64.1ms
+985:	learn: 39145.4824008	total: 4.21s	remaining: 59.8ms
+986:	learn: 39136.5719800	total: 4.21s	remaining: 55.5ms
+987:	learn: 39131.8425457	total: 4.22s	remaining: 51.2ms
+988:	learn: 39123.7662355	total: 4.22s	remaining: 46.9ms
+989:	learn: 39117.2461196	total: 4.22s	remaining: 42.7ms
+990:	learn: 39108.5383830	total: 4.23s	remaining: 38.4ms
+991:	learn: 39100.6329978	total: 4.23s	remaining: 34.1ms
+992:	learn: 39095.1569578	total: 4.24s	remaining: 29.9ms
+993:	learn: 39085.1125004	total: 4.24s	remaining: 25.6ms
+994:	learn: 39077.9144356	total: 4.24s	remaining: 21.3ms
+995:	learn: 39069.1024700	total: 4.25s	remaining: 17.1ms
+996:	learn: 39062.0579072	total: 4.25s	remaining: 12.8ms
+997:	learn: 39047.8120306	total: 4.25s	remaining: 8.52ms
+998:	learn: 39038.7584061	total: 4.26s	remaining: 4.26ms
+999:	learn: 39026.4270276	total: 4.26s	remaining: 0us
+prediction...
+>CatBoost 0.839 (0.000)
+memory RAM released.
+memory RAM released.
+setting the pipeline object ...
+preprocessor...
+preprocessing: the categorical and numerical feature now...
+One Hot Encoder...
+categorical features: ['ocean_proximity']
+>>> pipeline defined!
+prediction...
+>LinearR 0.615 (0.000)
+memory RAM released.
+memory RAM released.
+[0.1291785819466052, 0.12261085103128314, 0.05690679828261273, 0.049057758289564976, 0.48781450515314456, 0.007786259392518226, 0.14664524590427117]
+features selected:
+the K best features selected to the model (RandomForest): ['longitude', 'latitude', 'total_rooms', 'households', 'median_income', 'ocean_proximity']
+######################################################################
+model: RandomForest
+longitude.......: 12.92 %
+latitude.......: 12.26 %
+total_rooms.......: 5.69 %
+households.......: 4.91 %
+median_income.......: 48.78 %
+ocean_proximity.......: 0.78 %
+######################################################################
+[0.13090864060203825, 0.12529988312806611, 0.0538168106486399, 0.05025299838999854, 0.4869367394832082, 0.007245325403343559, 0.14553960234470562]
+features selected:
+the K best features selected to the model (DecisionTree): ['longitude', 'latitude', 'total_rooms', 'households', 'median_income', 'ocean_proximity']
+######################################################################
+model: DecisionTree
+longitude.......: 13.09 %
+latitude.......: 12.53 %
+total_rooms.......: 5.38 %
+households.......: 5.03 %
+median_income.......: 48.69 %
+ocean_proximity.......: 0.72 %
+######################################################################
+[0.025806144, 0.027352007, 0.006367719, 0.00824394, 0.12951002, 0.035452396, 0.7672678]
+features selected:
+the K best features selected to the model (XGBoost): ['longitude', 'latitude', 'total_rooms', 'households', 'median_income', 'ocean_proximity']
+######################################################################
+model: XGBoost
+longitude.......: 2.58 %
+latitude.......: 2.74 %
+total_rooms.......: 0.64 %
+households.......: 0.82 %
+median_income.......: 12.95 %
+ocean_proximity.......: 3.55 %
+######################################################################
+[24.896953256037385, 22.428563713838987, 6.211358683454702, 3.3058434458354773, 25.686845222304527, 2.3406744643629858, 15.129761214165924]
+features selected:
+the K best features selected to the model (CatBoost): ['longitude', 'latitude', 'total_rooms', 'households', 'median_income', 'ocean_proximity']
+######################################################################
+model: CatBoost
+longitude.......: 24.9 %
+latitude.......: 22.43 %
+total_rooms.......: 6.21 %
+households.......: 3.31 %
+median_income.......: 25.69 %
+ocean_proximity.......: 2.34 %
+######################################################################

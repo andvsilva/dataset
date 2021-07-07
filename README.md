@@ -156,6 +156,8 @@ $ pip3 freeze > requirements.txt
 
 - [A Practical Guide to Exploratory Data Analysis (EDA) in Python — How to Start Any Data Analysis.](https://medium.com/analytics-vidhya/a-practical-guide-to-exploratory-data-analysis-eda-in-python-how-to-start-any-data-analysis-3fd200516553)
   - EDA is a must for any data project. It is a critical first step that can make your life easier and shed a light on your data.
+ 
+- [Feature Selection in Large Datasets - Use of Shapash and Scikit-Learn’s Recursive Feature Selection](https://mdsohel-mahmood.medium.com/feature-selection-in-large-datasets-fc27a7e8e388) 
 
 ### Programming
 - [Introduction to programming](https://beknazarsuranchiyev.medium.com/introduction-to-programming-56dda6a1cbd7)

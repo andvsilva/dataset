@@ -28,7 +28,7 @@ from matplotlib.ticker import MaxNLocator
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
-from sklearn.feature_selection import SelectKBest, f_regression
+from sklearn.feature_selection import SelectKBest, f_regression, mutual_info_regression
 from sklearn.pipeline import Pipeline
 from sklearn.impute import SimpleImputer
 from sklearn.compose import ColumnTransformer
@@ -44,6 +44,9 @@ import xgboost as xgb
 import catboost as cb
 from sklearn.linear_model import LinearRegression
 from sklearn.linear_model import LogisticRegression
+
+# This make machine learning interpretable and understandable to everyone.
+from shapash.explainer.smart_explainer import SmartExplainer 
 
 # Pandas has a high consume of memory RAM usage
 # release memory RAM
@@ -98,7 +101,7 @@ def pipeline_project(df, model):
     print('preprocessor...')
     preprocessor = transf_cat_num(df)
 
-    feature_selection = SelectKBest(score_func=f_regression, k = 5)
+    feature_selection = SelectKBest(score_func=mutual_info_regression, k = 5) # f_regression
 
     pipe = Pipeline(steps=[('preprocessor', preprocessor),
                             ('fs', feature_selection),

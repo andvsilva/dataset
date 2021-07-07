@@ -1,0 +1,92 @@
+>>> date:  07/07/2021 18:26:22
+       longitude  latitude  ...  median_house_value  ocean_proximity
+0        -122.23     37.88  ...            452600.0         NEAR BAY
+1        -122.22     37.86  ...            358500.0         NEAR BAY
+2        -122.24     37.85  ...            352100.0         NEAR BAY
+3        -122.25     37.85  ...            341300.0         NEAR BAY
+4        -122.25     37.85  ...            342200.0         NEAR BAY
+...          ...       ...  ...                 ...              ...
+20635    -121.09     39.48  ...             78100.0           INLAND
+20636    -121.21     39.49  ...             77100.0           INLAND
+20637    -121.22     39.43  ...             92300.0           INLAND
+20638    -121.32     39.43  ...             84700.0           INLAND
+20639    -121.24     39.37  ...             89400.0           INLAND
+
+[20640 rows x 10 columns]
+Number of rows.....................: 20640
+Number of columns..................: 10
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 20640 entries, 0 to 20639
+Data columns (total 10 columns):
+ #   Column              Non-Null Count  Dtype  
+---  ------              --------------  -----  
+ 0   longitude           20640 non-null  float64
+ 1   latitude            20640 non-null  float64
+ 2   housing_median_age  20640 non-null  float64
+ 3   total_rooms         20640 non-null  float64
+ 4   total_bedrooms      20433 non-null  float64
+ 5   population          20640 non-null  float64
+ 6   households          20640 non-null  float64
+ 7   median_income       20640 non-null  float64
+ 8   median_house_value  20640 non-null  float64
+ 9   ocean_proximity     20640 non-null  object 
+dtypes: float64(9), object(1)
+memory usage: 1.6+ MB
+None
+<1H OCEAN     9136
+INLAND        6551
+NEAR OCEAN    2658
+NEAR BAY      2290
+ISLAND           5
+Name: ocean_proximity, dtype: int64
+          longitude      latitude  ...  median_income  median_house_value
+count  20640.000000  20640.000000  ...   20640.000000        20640.000000
+mean    -119.569704     35.631861  ...       3.870671       206855.816909
+std        2.003532      2.135952  ...       1.899822       115395.615874
+min     -124.350000     32.540000  ...       0.499900        14999.000000
+25%     -121.800000     33.930000  ...       2.563400       119600.000000
+50%     -118.490000     34.260000  ...       3.534800       179700.000000
+75%     -118.010000     37.710000  ...       4.743250       264725.000000
+max     -114.310000     41.950000  ...      15.000100       500001.000000
+
+[8 rows x 9 columns]
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 20640 entries, 0 to 20639
+Columns: 10 entries, longitude to ocean_proximity
+dtypes: float64(9), object(1)
+memory usage: 2.7 MB
+None
+longitude               0
+latitude                0
+housing_median_age      0
+total_rooms             0
+total_bedrooms        207
+population              0
+households              0
+median_income           0
+median_house_value      0
+ocean_proximity         0
+dtype: int64
+(20640, 10)
+       longitude  latitude  ...  median_house_value  ocean_proximity
+0        -122.23     37.88  ...            452600.0         NEAR BAY
+1        -122.22     37.86  ...            358500.0         NEAR BAY
+2        -122.24     37.85  ...            352100.0         NEAR BAY
+3        -122.25     37.85  ...            341300.0         NEAR BAY
+4        -122.25     37.85  ...            342200.0         NEAR BAY
+...          ...       ...  ...                 ...              ...
+20635    -121.09     39.48  ...             78100.0           INLAND
+20636    -121.21     39.49  ...             77100.0           INLAND
+20637    -121.22     39.43  ...             92300.0           INLAND
+20638    -121.32     39.43  ...             84700.0           INLAND
+20639    -121.24     39.37  ...             89400.0           INLAND
+
+[20433 rows x 10 columns]
+Number of rows.....................: 20433
+Number of columns..................: 10
+saving the file format feather...
+time of execution (preprocessing): 0.0141 minutes
+the preprocessing is done.
+The next step is to do the feature engineering.
+>>> date:  07/07/2021 18:26:23
+All Done. :)
