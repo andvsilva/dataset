@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>kc_house_data | Kaggle</title>
+  <meta charset="utf-8" />
+  <meta name="robots" content="index, follow" />
+  <meta name="description" content="Kaggle is the world&#x2019;s largest data science community with powerful tools and resources to help you achieve your data science goals." />
+  <meta name="turbolinks-cache-control" content="no-cache" />
+    <meta name="keywords" content="linear regression" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+  <meta name="theme-color" content="#008ABC" />
+  <script nonce="Klj5Av1U48PG5v1fIxp3Dw==" type="text/javascript">
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations()
+        .then(function (registrations) {
+          for (let registration of registrations) {
+            registration.unregister();
+          }
+        })
+        .catch(function (err) {
+          console.error("Service worker unregister failed: ", err);
+        });
+    }
+  </script>
+  <script nonce="Klj5Av1U48PG5v1fIxp3Dw==" type="text/javascript">
+    window["pageRequestStartTime"] = 1626701301455;
+    window["pageRequestEndTime"] = 1626701301559;
+    window["initialPageLoadStartTime"] = new Date().getTime();
+  </script>
+  <link rel="preconnect" href="https://www.google-analytics.com" crossorigin="anonymous" /><link rel="preconnect" href="https://stats.g.doubleclick.net" /><link rel="preconnect" href="https://storage.googleapis.com" /><link rel="preconnect" href="https://apis.google.com" />
+  <link href="/static/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <link rel="manifest" href="/static/json/manifest.json" crossorigin="use-credentials">
+
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/icon?family=Google+Material+Icons"
+    rel="preload" as="style" />
+  <link href="https://fonts.googleapis.com/icon?family=Google+Material+Icons"
+    rel="stylesheet" media="print" id="async-google-font" />
+  <script nonce="Klj5Av1U48PG5v1fIxp3Dw==" type="text/javascript">
+    document.getElementById("async-google-font").addEventListener("load", function() {
+      this.media = "all";
+    });
+  </script>
+  
+    <link rel="stylesheet" type="text/css" href="/static/assets/vendor.css?v=82cb257701542c806dbc" />
+    <link rel="stylesheet" type="text/css" href="/static/assets/app.css?v=4cf6be8bbd5c8f196681" />
+  
+    
+ 
+  
+    <script nonce="Klj5Av1U48PG5v1fIxp3Dw==">
+        try{(function(a,s,y,n,c,h,i,d,e){d=s.createElement("style");
+        d.appendChild(s.createTextNode(""));s.head.appendChild(d);d=d.sheet;
+        y=y.map(x => d.insertRule(x + "{ opacity: 0 !important }"));
+        h.start=1*new Date;h.end=i=function(){y.forEach(x => x<d.cssRules.length ? d.deleteRule(x) : {})};
+        (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+        })(window,document,['.site-header-react__nav'],'dataLayer',2000,{'GTM-52LNT9S':true});}catch(ex){}
+    </script>
+    <script nonce="Klj5Av1U48PG5v1fIxp3Dw==">
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-12629138-1', {
+            'optimize_id': 'GTM-52LNT9S',
+            'displayFeaturesTask': null,
+            'send_page_view': false,
+            'content_group1': 'Datasets'
+        });
+    </script>
+    <script nonce="Klj5Av1U48PG5v1fIxp3Dw==" async src="https://www.googletagmanager.com/gtag/js?id=UA-12629138-1"></script>
+
+  
+    
+        <meta property="og:url" content="https://kaggle.com/shivachandel/kc-house-data" />
+        <meta property="og:title" content="kc_house_data" />
+        <meta property="og:description" content="" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://storage.googleapis.com/kaggle-datasets-images/new-version-temp-images/default-backgrounds-9.png-1640476/dataset-card.png" />
+        <meta property="fb:app_id" content="2665027677054710" />
+
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@kaggledatasets" />
+    
+
+  <meta name="twitter:site" content="@Kaggle" /> 
+  
+    
+        <script nonce="Klj5Av1U48PG5v1fIxp3Dw==" type="application/ld+json">{"@context":"http://schema.org/","@type":"Dataset","name":"kc_house_data","description":"# Dataset\nThis dataset was created by Shiva Chandel\n\nReleased under Other (specified in description)\n\n# Contents\nIt contains the following files:\n\n","url":"https://www.kaggle.com/shivachandel/kc-house-data","version":1,"keywords":["technique, regression, linear regression"],"license":{"@type":"CreativeWork","name":"Other (specified in description)","url":""},"identifier":["30990"],"includedInDataCatalog":{"@type":"DataCatalog","name":"Kaggle","url":"https://www.kaggle.com"},"creator":{"@type":"Person","name":"Shiva Chandel","url":"https://www.kaggle.com/shivachandel","image":"https://storage.googleapis.com/kaggle-avatars/thumbnails/1640476-gp.jpg"},"distribution":[{"@type":"DataDownload","requiresSubscription":true,"encodingFormat":"zip","fileFormat":"zip","contentUrl":"https://www.kaggle.com/shivachandel/kc-house-data/download","contentSize":"788976 bytes"}],"commentCount":0,"dateModified":"2018-06-11T08:38:58.76","discussionUrl":"https://www.kaggle.com/shivachandel/kc-house-data/discussion","alternateName":"","isAccessibleForFree":true,"thumbnailUrl":"https://storage.googleapis.com/kaggle-datasets-images/new-version-temp-images/default-backgrounds-9.png-1640476/dataset-card.png","interactionStatistic":[{"@type":"InteractionCounter","interactionType":"http://schema.org/CommentAction","userInteractionCount":0},{"@type":"InteractionCounter","interactionType":"http://schema.org/DownloadAction","userInteractionCount":6984},{"@type":"InteractionCounter","interactionType":"http://schema.org/ViewAction","userInteractionCount":44409},{"@type":"InteractionCounter","interactionType":"http://schema.org/LikeAction","userInteractionCount":58}]}</script>
+    
+
+  
+    
+    
+<script nonce="Klj5Av1U48PG5v1fIxp3Dw==" type="text/javascript">
+    var Kaggle = window.Kaggle || {};
+
+    Kaggle.Current = {
+        antiForgeryToken: 'CfDJ8LdUzqlsSWBPr4Ce3rb9VL82zOjRWwg_Pm2QjvSwIlbm1OwBW8aGIXDHNorkjjhay51gz_fzgs1cL2OgNbgQbrTUaCrYl71h_4L9wDhi6QU0Hrh6ZOAjV3l13pPgWjbOvt8t0k2qTTkqhTYp7DKLT50',
+        isAnonymous: true,
+        analyticsToken: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjY3MDIyMDEsIlVzZXJJZCI6MH0.0qH6iqe_JyOU8ZfDJY76aZM911aOor8JqWYkHk3Y84E',
+        analyticsTokenExpiry: 15,
+        
+        
+        
+        
+        
+        
+        
+        enableRapidash: true, 
+    }
+        Kaggle.Current.log = function(){};
+        Kaggle.Current.warn = function(){};
+
+    var decodeUserDisplayName = function () {
+        var escapedUserDisplayName = Kaggle.Current.userDisplayNameEscaped || "";
+        try {
+            var textVersion = new DOMParser().parseFromString(escapedUserDisplayName, "text/html").documentElement.textContent;
+            if (textVersion) {
+                return textVersion;
+            }
+        } catch(ex) {}
+        return escapedUserDisplayName;
+    }
+    Kaggle.Current.userDisplayName = decodeUserDisplayName();
+</script>
+
+    
+
+<script nonce="Klj5Av1U48PG5v1fIxp3Dw==" type="text/javascript">
+    var Kaggle = window.Kaggle || {};
+    Kaggle.PageMessages = [];
+</script>
+
+
+
+    <script nonce="Klj5Av1U48PG5v1fIxp3Dw==">window['useKaggleAnalytics'] = true;</script>
+
+  <script id="gapi-target" nonce="Klj5Av1U48PG5v1fIxp3Dw==" src="https://apis.google.com/js/api.js" defer
+    async></script>
+  <script nonce="Klj5Av1U48PG5v1fIxp3Dw==" src="/static/assets/runtime.js?v=9b70e5cb327e55320e68" data-turbolinks-track="reload"></script>
+  <script nonce="Klj5Av1U48PG5v1fIxp3Dw==" src="/static/assets/vendor.js?v=af265978101be227c0bc" data-turbolinks-track="reload"></script>
+  <script nonce="Klj5Av1U48PG5v1fIxp3Dw==" src="/static/assets/app.js?v=d02c46dce80a5212ecd9" data-turbolinks-track="reload"></script>
+    <script nonce="Klj5Av1U48PG5v1fIxp3Dw==" type="text/javascript">
+      window.kaggleStackdriverConfig = {
+        key: 'AIzaSyA4eNqUdRRskJsCZWVz-qL655Xa5JEMreE',
+        projectId: 'kaggle-161607',
+        service: 'web-fe',
+        version: 'ci',
+        userId: '0'
+      }
+    </script>
+</head>
+
+<body data-turbolinks="false">
+  <main>
+    
+
+
+
+
+
+<div id="site-container"></div>
+<div data-component-name="NavigationContainer" style="display: flex; flex-direction: column; flex: 1 0 auto;"></div><script class="kaggle-component" nonce="Klj5Av1U48PG5v1fIxp3Dw==">var Kaggle=window.Kaggle||{};Kaggle.State=Kaggle.State||[];Kaggle.State.push({"navigationType":"BOTH_NAV"});performance && performance.mark && performance.mark("NavigationContainer.componentCouldBootstrap");</script>
+<div id="site-body" class="hide">
+    
+
+
+<div data-component-name="DatasetContainer" style="display: flex; flex-direction: column; flex: 1 0 auto;"></div><script class="kaggle-component" nonce="Klj5Av1U48PG5v1fIxp3Dw==">var Kaggle=window.Kaggle||{};Kaggle.State=Kaggle.State||[];Kaggle.State.push({"discussion":{"canDownvote":false,"dataUrl":"/forums/39291/topics.json","id":39291,"showSubscribeButton":false,"isSubscribed":false,"subscription":"unsubscribe","paramValues":{"category":"all","page":1,"search":null,"group":"all","sortBy":"hot"}},"currentTab":"home","newTopic":{"allowAttachments":false,"authorRanking":null,"authorTier":"novice","authorType":"topic","forumId":39291,"parentName":"kc_house_data","parentUrl":"/shivachandel/kc-house-data/discussion"},"categories":{"type":"dataset","tags":[{"id":13405,"name":"linear regression","fullPath":"technique \u003e regression \u003e linear regression","listingUrl":"/datasets?group=public\u0026tagids=13405","description":null,"datasetCount":210,"competitionCount":0,"notebookCount":2781,"tagUrl":"/tags/linear-regression","displayName":"Linear Regression","fontAwesomeIcon":""}]},"upvoteSuggestion":{"voteCount":58,"medalVoteCount":8,"upVoteUrl":"/shivachandel/kc-house-data/vote","upVoters":[{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/3017661-kg.jpg","displayName":"Pranav Anand","profileUrl":"/pranavanand24","tier":"Expert","tierInt":2,"userId":3017661,"userName":"pranavanand24"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/3350473-kg.jpg","displayName":"Jatin Shukla","profileUrl":"/shuklajt","tier":"Contributor","tierInt":1,"userId":3350473,"userName":"shuklajt"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/2812082-kg.jpeg","displayName":"Divya Singh","profileUrl":"/divyasingh279","tier":"Contributor","tierInt":1,"userId":2812082,"userName":"divyasingh279"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/5771810-kg.jpg","displayName":"mohammad__hy","profileUrl":"/mohammadhy","tier":"Contributor","tierInt":1,"userId":5771810,"userName":"mohammadhy"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png","displayName":"Andrés Campaña","profileUrl":"/andrscampaa","tier":"Contributor","tierInt":1,"userId":5453255,"userName":"andrscampaa"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/2078800-kg.jpg","displayName":"Bug","profileUrl":"/akhil1729","tier":"Contributor","tierInt":1,"userId":2078800,"userName":"akhil1729"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/1302444-kg.jpg","displayName":"Luís Gustavo Modelli","profileUrl":"/gustavomodelli","tier":"Contributor","tierInt":1,"userId":1302444,"userName":"gustavomodelli"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png","displayName":"fazal hyder","profileUrl":"/fazalhyder","tier":"Contributor","tierInt":1,"userId":5040639,"userName":"fazalhyder"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png","displayName":"SONI SINGHANIA","profileUrl":"/sonisinghania","tier":"Novice","tierInt":0,"userId":5005783,"userName":"sonisinghania"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png","displayName":"Busani arun kumar","profileUrl":"/busaniarunkumar","tier":"Novice","tierInt":0,"userId":4895021,"userName":"busaniarunkumar"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/4803437-kg.jpg","displayName":"Ayush Tiwari","profileUrl":"/ayushtiwari08","tier":"Novice","tierInt":0,"userId":4803437,"userName":"ayushtiwari08"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png","displayName":"VENKAT ANAND SAI D","profileUrl":"/venkatanandsaid","tier":"Novice","tierInt":0,"userId":4727089,"userName":"venkatanandsaid"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png","displayName":"Omar Naeem","profileUrl":"/omarnaeem","tier":"Novice","tierInt":0,"userId":4697926,"userName":"omarnaeem"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png","displayName":"Raymond Mess","profileUrl":"/raymondmess","tier":"Novice","tierInt":0,"userId":4689974,"userName":"raymondmess"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png","displayName":"Komal Vajirkar","profileUrl":"/komalvajirkar","tier":"Novice","tierInt":0,"userId":4640156,"userName":"komalvajirkar"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png","displayName":"Edward Heijmeijer","profileUrl":"/edwardheijmeijer","tier":"Novice","tierInt":0,"userId":4626677,"userName":"edwardheijmeijer"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png","displayName":"Wesley Dias Maciel","profileUrl":"/wesleydiasmaciel","tier":"Novice","tierInt":0,"userId":4503261,"userName":"wesleydiasmaciel"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png","displayName":"Russell Pihlstrom","profileUrl":"/russellpihlstrom","tier":"Novice","tierInt":0,"userId":4501750,"userName":"russellpihlstrom"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png","displayName":"Bryan Trujillo","profileUrl":"/bryantrujillo","tier":"Novice","tierInt":0,"userId":4499518,"userName":"bryantrujillo"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/4421160-gr.jpg","displayName":"ZHIJUN ZHANG","profileUrl":"/zhijunzhang","tier":"Novice","tierInt":0,"userId":4421160,"userName":"zhijunzhang"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png","displayName":"Abhishek P Singh","profileUrl":"/abhishekpsingh","tier":"Novice","tierInt":0,"userId":4351112,"userName":"abhishekpsingh"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png","displayName":"DHARMIK_PATEL1710","profileUrl":"/dharmikpatel1710","tier":"Novice","tierInt":0,"userId":4339341,"userName":"dharmikpatel1710"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png","displayName":"Jiun-Yeu Chen","profileUrl":"/jiunyeuchen","tier":"Novice","tierInt":0,"userId":4130543,"userName":"jiunyeuchen"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png","displayName":"Faculty","profileUrl":"/faculty","tier":"Novice","tierInt":0,"userId":4066683,"userName":"faculty"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png","displayName":"Scouser","profileUrl":"/scouser","tier":"Novice","tierInt":0,"userId":4050341,"userName":"scouser"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png","displayName":"SeyedRasoul Hosseini","profileUrl":"/seyedrasoulhosseini","tier":"Novice","tierInt":0,"userId":3918663,"userName":"seyedrasoulhosseini"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png","displayName":"Volcanes","profileUrl":"/volcanes","tier":"Novice","tierInt":0,"userId":3911135,"userName":"volcanes"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png","displayName":"Wesley Willis","profileUrl":"/wesleywillis","tier":"Novice","tierInt":0,"userId":3897369,"userName":"wesleywillis"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png","displayName":"mounika","profileUrl":"/kodipallimounika","tier":"Novice","tierInt":0,"userId":3773792,"userName":"kodipallimounika"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png","displayName":"Rekha Madhuri","profileUrl":"/rekha57","tier":"Novice","tierInt":0,"userId":3741540,"userName":"rekha57"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/3659199-kg.jpg","displayName":"DMwangi","profileUrl":"/dmwangi","tier":"Novice","tierInt":0,"userId":3659199,"userName":"dmwangi"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png","displayName":"danju","profileUrl":"/danjuez","tier":"Novice","tierInt":0,"userId":3621225,"userName":"danjuez"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png","displayName":"James Mwangi","profileUrl":"/jewachu26","tier":"Novice","tierInt":0,"userId":3520118,"userName":"jewachu26"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png","displayName":"amara shaikh","profileUrl":"/ummeumara","tier":"Novice","tierInt":0,"userId":3497102,"userName":"ummeumara"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/3479094-fb.jpg","displayName":"aroob","profileUrl":"/arooooooooooooooooob","tier":"Novice","tierInt":0,"userId":3479094,"userName":"arooooooooooooooooob"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png","displayName":"Dhatrija","profileUrl":"/vdhatrija16cse","tier":"Novice","tierInt":0,"userId":3478451,"userName":"vdhatrija16cse"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png","displayName":"Jubril ","profileUrl":"/otunbade","tier":"Novice","tierInt":0,"userId":3422266,"userName":"otunbade"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/3392071-gr.jpg","displayName":"BNVRS SRI HARSHA","profileUrl":"/bnvrsharsha","tier":"Novice","tierInt":0,"userId":3392071,"userName":"bnvrsharsha"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png","displayName":"reddy","profileUrl":"/shirishareddy123","tier":"Novice","tierInt":0,"userId":3352973,"userName":"shirishareddy123"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png","displayName":"sathwik vadlamani","profileUrl":"/nikhil1006","tier":"Novice","tierInt":0,"userId":3352604,"userName":"nikhil1006"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png","displayName":"Michael Rademaker","profileUrl":"/dvorkbod","tier":"Novice","tierInt":0,"userId":894267,"userName":"dvorkbod"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png","displayName":"msatoru","profileUrl":"/msatoru","tier":"Novice","tierInt":0,"userId":1706515,"userName":"msatoru"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png","displayName":"Heli Patel","profileUrl":"/hpatel000","tier":"Novice","tierInt":0,"userId":5368156,"userName":"hpatel000"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/5161330-kg.jpeg","displayName":"Pavithra Kollipara","profileUrl":"/pavithrakollipara","tier":"Novice","tierInt":0,"userId":5161330,"userName":"pavithrakollipara"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png","displayName":"aid sir","profileUrl":"/aidsir","tier":"Novice","tierInt":0,"userId":5142648,"userName":"aidsir"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png","displayName":"Shruti Gupta","profileUrl":"/gupta22shruti","tier":"Novice","tierInt":0,"userId":5048156,"userName":"gupta22shruti"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/7700023-gr.jpg","displayName":"Bambang Adi Candra","profileUrl":"/bambangadicandra","tier":"Novice","tierInt":0,"userId":7700023,"userName":"bambangadicandra"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/7084251-gr.jpg","displayName":"Ghufran Hasan","profileUrl":"/ghufranhasan","tier":"Novice","tierInt":0,"userId":7084251,"userName":"ghufranhasan"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png","displayName":"DennisPR","profileUrl":"/dennispr","tier":"Novice","tierInt":0,"userId":6719484,"userName":"dennispr"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png","displayName":"Chao Li","profileUrl":"/chaoli1302","tier":"Novice","tierInt":0,"userId":6705056,"userName":"chaoli1302"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/6232966-kg.jpg","displayName":"omar elghorchi","profileUrl":"/omarelghorchi","tier":"Novice","tierInt":0,"userId":6232966,"userName":"omarelghorchi"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png","displayName":"KANYANEE MANAPRADIT","profileUrl":"/kanyaneemanapradit","tier":"Novice","tierInt":0,"userId":6108562,"userName":"kanyaneemanapradit"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png","displayName":"Alex Bene","profileUrl":"/abenedi4","tier":"Novice","tierInt":0,"userId":2751052,"userName":"abenedi4"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png","displayName":"Javier","profileUrl":"/rroyat","tier":"Novice","tierInt":0,"userId":2636747,"userName":"rroyat"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png","displayName":"Febry Prasetyo","profileUrl":"/febryprasetyo","tier":"Novice","tierInt":0,"userId":2413461,"userName":"febryprasetyo"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/2297788-kg.jpg","displayName":"sheath","profileUrl":"/sheath123","tier":"Novice","tierInt":0,"userId":2297788,"userName":"sheath123"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/3276187-kg.jpg","displayName":"aidlmldev","profileUrl":"/aidlmldev","tier":"Novice","tierInt":0,"userId":3276187,"userName":"aidlmldev"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png","displayName":"Carmen Martinez","profileUrl":"/cjmf18","tier":"Novice","tierInt":0,"userId":2932214,"userName":"cjmf18"}]},"readerGroupId":null,"writerGroupId":null,"collaborators":{"owner":{"userId":1640476,"groupId":null,"groupMemberCount":null,"profileUrl":"/shivachandel","thumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/1640476-gp.jpg","name":"Shiva Chandel","slug":"shivachandel","userTier":0,"joinDate":null,"type":"owner","isUser":true,"isGroup":false},"collaborators":[]},"isCollaborator":false,"deletionNeedsReview":false,"hasDatasetDoiApproved":false,"canSeeConfigAsCode":true,"canCreateDatasetTasks":true,"blockTaskCreation":false,"canSeeDatasetHashLink":true,"medalUrl":"/static/images/medals/datasets/bronzel@2x.png","datasetHashLink":null,"datasetId":30990,"isRemoved":false,"isVersionRemoved":false,"isFeatured":false,"isSuperFeatured":false,"scheduledToBeFeatured":null,"scheduledToBeUnFeatured":null,"scheduledToBeSuperFeatured":null,"scheduledToBeUnSuperFeatured":null,"datasetVersionId":39532,"datasetVersionNumber":1,"lastVersionNumber":1,"datasetUrl":"/shivachandel/kc-house-data","datasetExternalUrl":"https://kaggle.com/shivachandel/kc-house-data","originalImageUrl":"https://storage.googleapis.com/kaggle-datasets-images/default-backgrounds/9.png","coverImageUrl":"https://storage.googleapis.com/kaggle-datasets-images/new-version-temp-images/default-backgrounds-9.png-1640476/dataset-cover.png","cardImageUrl":"https://storage.googleapis.com/kaggle-datasets-images/new-version-temp-images/default-backgrounds-9.png-1640476/dataset-card.png","thumbnailImageUrl":"https://storage.googleapis.com/kaggle-datasets-images/new-version-temp-images/default-backgrounds-9.png-1640476/dataset-thumbnail.png","license":{"id":12,"name":"Other (specified in description)","description":"Other (specified in description)","url":null,"displaySequence":null},"voteCount":58,"upVoteUrl":"/shivachandel/kc-house-data/vote","creatorUserId":1640476,"creatorDisplayName":"Shiva Chandel","ownerTwitter":null,"lastUpdated":"2018-06-11T08:38:58.76Z","downloadUrl":"/shivachandel/kc-house-data/download","newNotebookUrl":"code/scripts/new?datasetVersionId=39532","newScriptUrl":"code/scripts/new?datasetVersionId=39532","hasAlreadyVotedUp":false,"isOldDatasetVersion":false,"numberOfViews":44409,"numberOfDownloads":6984,"numberOfScripts":15,"numberOfTopics":0,"numberOfTasks":1,"canEdit":false,"canPerformOwnerTasks":false,"canEditSlug":false,"canEditPublishStatus":false,"canEditFeatureStatus":false,"canEditDescription":false,"hideVersionStatuses":true,"cardImageLeft":650,"cardImageTop":0,"cardImageWidth":600,"cardImageHeight":600,"coverImageLeft":0,"coverImageTop":100,"coverImageWidth":1900,"coverImageHeight":400,"datasetVersions":[{"id":39532,"slug":"kc-house-data","name":"kc_house_data","creationDate":"2018-06-11T08:38:58.76Z","versionNumber":1,"versionNotes":"Initial release","thumbnailImageUrl":"https://storage.googleapis.com/kaggle-datasets-images/new-version-temp-images/default-backgrounds-9.png-1640476/dataset-thumbnail.png","datasetVersionUrl":"/shivachandel/kc-house-data/version/1","status":"ready","userMessage":null,"isRemoved":false,"creator":{"id":1640476,"imageUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/1640476-gp.jpg","isOrganization":false,"name":"Shiva Chandel","profileUrl":"/shivachandel","slug":"shivachandel","maxFileSizeBytes":null,"userTier":null,"organizationMemberCount":null},"userSpecifiedSources":null,"doi":null,"databundleVersionId":41689}],"datasetVersionTotalCount":1,"feed":[],"topicId":null,"isNewTopic":false,"canSeeDeletionButton":false,"checklistDismissed":true,"type":"fileset","diffType":"versioned","checklistCollapsed":true,"isInFlight":false,"maintainerOrganization":null,"createdByKernel":null,"usabilityRating":{"score":0.5294118,"columnDescriptionScore":0.0,"coverImageScore":0.0,"fileDescriptionScore":1.0,"fileFormatScore":1.0,"licenseScore":1.0,"overviewScore":0.0,"provenanceScore":0.0,"publicKernelScore":1.0,"subtitleScore":0.0,"tagScore":1.0,"updateFrequencyScore":0.0},"bookmarked":false,"licenseGroups":[{"id":1,"name":"Creative Commons","licenses":[{"id":1,"name":"CC0: Public Domain","description":"CC0: Public Domain \u003ca href=\u0022https://creativecommons.org/publicdomain/zero/1.0/\u0022 target=\u0022_blank\u0022\u003e\u003cspan class=\u0022fa fa-info-circle\u0022/\u003e\u003c/a\u003e","url":"https://creativecommons.org/publicdomain/zero/1.0/","displaySequence":1},{"id":3,"name":"CC BY-NC-SA 4.0","description":"CC BY-NC-SA 4.0 \u003ca href=\u0022https://creativecommons.org/licenses/by-nc-sa/4.0/\u0022 target=\u0022_blank\u0022\u003e\u003cspan class=\u0022fa fa-info-circle\u0022/\u003e\u003c/a\u003e","url":"https://creativecommons.org/licenses/by-nc-sa/4.0/","displaySequence":2},{"id":8,"name":"CC BY-SA 4.0","description":"CC BY-SA 4.0 \u003ca href=\u0022https://creativecommons.org/licenses/by-sa/4.0/\u0022 target=\u0022_blank\u0022\u003e\u003cspan class=\u0022fa fa-info-circle\u0022/\u003e\u003c/a\u003e","url":"https://creativecommons.org/licenses/by-sa/4.0/","displaySequence":3},{"id":10,"name":"CC BY-SA 3.0","description":"CC BY-SA 3.0 \u003ca href=\u0022https://creativecommons.org/licenses/by-sa/3.0/\u0022 target=\u0022_blank\u0022\u003e\u003cspan class=\u0022fa fa-info-circle\u0022/\u003e\u003c/a\u003e","url":"https://creativecommons.org/licenses/by-sa/3.0/","displaySequence":4},{"id":13,"name":"Attribution 4.0 International (CC BY 4.0)","description":"CC-BY 4.0 \u003ca href=\u0022https://creativecommons.org/licenses/by/4.0/\u0022 target=\u0022_blank\u0022\u003e\u003cspan class=\u0022fa fa-info-circle\u0022/\u003e\u003c/a\u003e","url":"https://creativecommons.org/licenses/by/4.0/","displaySequence":5},{"id":14,"name":"Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)","description":"CC-BY-NC 4.0 \u003ca href=\u0022https://creativecommons.org/licenses/by-nc/4.0/\u0022 target=\u0022_blank\u0022\u003e\u003cspan class=\u0022fa fa-info-circle\u0022/\u003e\u003c/a\u003e","url":"https://creativecommons.org/licenses/by-nc/4.0/","displaySequence":6},{"id":16,"name":"Attribution 3.0 Unported (CC BY 3.0)","description":"CC BY 3.0 \u003ca href=\u0022https://creativecommons.org/licenses/by/3.0/\u0022 target=\u0022_blank\u0022\u003e\u003cspan class=\u0022fa fa-info-circle\u0022/\u003e\u003c/a\u003e","url":"https://creativecommons.org/licenses/by/3.0/","displaySequence":7},{"id":17,"name":"Attribution 3.0 IGO (CC BY 3.0 IGO)","description":"CC BY 3.0 IGO \u003ca href=\u0022https://creativecommons.org/licenses/by/3.0/igo/\u0022 target=\u0022_blank\u0022\u003e\u003cspan class=\u0022fa fa-info-circle\u0022/\u003e\u003c/a\u003e","url":"https://creativecommons.org/licenses/by/3.0/igo/","displaySequence":8},{"id":19,"name":"Attribution-NonCommercial-ShareAlike 3.0 IGO (CC BY-NC-SA 3.0 IGO)","description":"CC BY-NC-SA 3.0 IGO \u003ca href=\u0022https://creativecommons.org/licenses/by-nc-sa/3.0/igo/\u0022 target=\u0022_blank\u0022\u003e\u003cspan class=\u0022fa fa-info-circle\u0022/\u003e\u003c/a\u003e","url":"https://creativecommons.org/licenses/by-nc-sa/3.0/igo/","displaySequence":9},{"id":22,"name":"Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)","description":"CC BY-ND 4.0 \u003ca href=\u0022https://creativecommons.org/licenses/by-nd/4.0/\u0022 target=\u0022_blank\u0022\u003e\u003cspan class=\u0022fa fa-info-circle\u0022/\u003e\u003c/a\u003e","url":"https://creativecommons.org/licenses/by-nd/4.0/","displaySequence":10},{"id":23,"name":"Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)","description":"CC BY-NC-ND 4.0 \u003ca href=\u0022https://creativecommons.org/licenses/by-nc-nd/4.0/\u0022 target=\u0022_blank\u0022\u003e\u003cspan class=\u0022fa fa-info-circle\u0022/\u003e\u003c/a\u003e","url":"https://creativecommons.org/licenses/by-nc-nd/4.0/","displaySequence":11}],"displaySequence":1},{"id":2,"name":"GPL","licenses":[{"id":9,"name":"GPL 2","description":"GPL 2 \u003ca href=\u0022http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html\u0022 target=\u0022_blank\u0022\u003e\u003cspan class=\u0022fa fa-info-circle\u0022/\u003e\u003c/a\u003e","url":"http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html","displaySequence":1},{"id":25,"name":"GNU Lesser General Public License 3.0","description":"LGPL 3.0 \u003ca href=\u0022http://www.gnu.org/licenses/lgpl-3.0.html\u0022 target=\u0022_blank\u0022\u003e\u003cspan class=\u0022fa fa-info-circle\u0022/\u003e\u003c/a\u003e","url":"http://www.gnu.org/licenses/lgpl-3.0.html","displaySequence":2},{"id":26,"name":"GNU Affero General Public License 3.0","description":"AGPL 3.0 \u003ca href=\u0022http://www.gnu.org/licenses/agpl-3.0.html\u0022 target=\u0022_blank\u0022\u003e\u003cspan class=\u0022fa fa-info-circle\u0022/\u003e\u003c/a\u003e","url":"http://www.gnu.org/licenses/agpl-3.0.html","displaySequence":3},{"id":27,"name":"GNU Free Documentation License 1.3","description":"FDL 1.3 \u003ca href=\u0022http://www.gnu.org/licenses/fdl-1.3.html\u0022 target=\u0022_blank\u0022\u003e\u003cspan class=\u0022fa fa-info-circle\u0022/\u003e\u003c/a\u003e","url":"http://www.gnu.org/licenses/fdl-1.3.html","displaySequence":4}],"displaySequence":2},{"id":3,"name":"Open Data Commons","licenses":[{"id":5,"name":"Database: Open Database, Contents: Database Contents","description":"Database: Open Database \u003ca href=\u0022http://opendatacommons.org/licenses/odbl/1.0/\u0022 target=\u0022_blank\u0022\u003e\u003cspan class=\u0022fa fa-info-circle\u0022/\u003e\u003c/a\u003e, Contents: Database Contents \u003ca href=\u0022http://opendatacommons.org/licenses/dbcl/1.0/\u0022 target=\u0022_blank\u0022\u003e\u003cspan class=\u0022fa fa-info-circle\u0022/\u003e\u003c/a\u003e","url":"http://opendatacommons.org/licenses/dbcl/1.0/","displaySequence":1},{"id":6,"name":"Database: Open Database, Contents: © Original Authors","description":"Database: Open Database \u003ca href=\u0022http://opendatacommons.org/licenses/odbl/1.0/\u0022 target=\u0022_blank\u0022\u003e\u003cspan class=\u0022fa fa-info-circle\u0022/\u003e\u003c/a\u003e, Contents: © Original Authors","url":"http://opendatacommons.org/licenses/odbl/1.0/","displaySequence":2},{"id":15,"name":"ODC Public Domain Dedication and Licence (PDDL)","description":"PDDL  \u003ca href=\u0022https://opendatacommons.org/licenses/pddl/1.0/\u0022 target=\u0022_blank\u0022\u003e\u003cspan class=\u0022fa fa-info-circle\u0022/\u003e\u003c/a\u003e","url":"https://opendatacommons.org/licenses/pddl/1.0/","displaySequence":3},{"id":24,"name":"ODC Attribution License (ODC-By)","description":"ODC-BY 1.0 \u003ca href=\u0022https://opendatacommons.org/licenses/by/1-0/index.html\u0022 target=\u0022_blank\u0022\u003e\u003cspan class=\u0022fa fa-info-circle\u0022/\u003e\u003c/a\u003e","url":"https://opendatacommons.org/licenses/by/1-0/index.html","displaySequence":4}],"displaySequence":3},{"id":6,"name":"Community Data License","licenses":[{"id":20,"name":"Community Data License Agreement - Permissive - Version 1.0","description":"CDLA Permissive 1.0 \u003ca href=\u0022https://cdla.io/permissive-1-0/\u0022 target=\u0022_blank\u0022\u003e\u003cspan class=\u0022fa fa-info-circle\u0022/\u003e\u003c/a\u003e","url":"https://cdla.io/permissive-1-0/","displaySequence":1},{"id":21,"name":"Community Data License Agreement - Sharing - Version 1.0","description":"CDLA Sharing 1.0 \u003ca href=\u0022https://cdla.io/sharing-1-0/\u0022 target=\u0022_blank\u0022\u003e\u003cspan class=\u0022fa fa-info-circle\u0022/\u003e\u003c/a\u003e","url":"https://cdla.io/sharing-1-0/","displaySequence":2}],"displaySequence":4},{"id":4,"name":"Special","licenses":[{"id":7,"name":"World Bank Dataset Terms of Use","description":"World Bank Dataset Terms of Use \u003ca href=\u0022https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets\u0022 target=\u0022_blank\u0022\u003e\u003cspan class=\u0022fa fa-info-circle\u0022/\u003e\u003c/a\u003e","url":"https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets","displaySequence":1},{"id":2,"name":"Reddit API Terms","description":"Reddit API Terms \u003ca href=\u0022https://www.reddit.com/wiki/api\u0022 target=\u0022_blank\u0022\u003e\u003cspan class=\u0022fa fa-info-circle\u0022/\u003e\u003c/a\u003e","url":"https://www.reddit.com/wiki/api","displaySequence":2},{"id":18,"name":"U.S. Government Works","description":"U.S. Government Works \u003ca href=\u0022https://www.usa.gov/government-works/\u0022 target=\u0022_blank\u0022\u003e\u003cspan class=\u0022fa fa-info-circle\u0022/\u003e\u003c/a\u003e","url":"https://www.usa.gov/government-works/","displaySequence":3},{"id":28,"name":"EU ODP Legal Notice","description":"EU ODP Legal Notice \u003ca href=\u0022https://ec.europa.eu/info/legal-notice_en\u0022 target=\u0022_blank\u0022\u003e\u003cspan class=\u0022fa fa-info-circle\u0022/\u003e\u003c/a\u003e","url":"https://ec.europa.eu/info/legal-notice_en","displaySequence":4}],"displaySequence":5},{"id":5,"name":"Other","licenses":[{"id":11,"name":"Data files © Original Authors","description":"Data files © Original Authors","url":null,"displaySequence":1},{"id":12,"name":"Other (specified in description)","description":"Other (specified in description)","url":null,"displaySequence":2},{"id":4,"name":"Unknown","description":"Unknown","url":null,"displaySequence":3}],"displaySequence":6}],"owners":[{"id":0,"imageUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/","isOrganization":false,"name":null,"profileUrl":"/","slug":null,"maxFileSizeBytes":null,"userTier":null,"organizationMemberCount":null},{"id":1640476,"imageUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/1640476-gp.jpg","isOrganization":false,"name":"Shiva Chandel","profileUrl":"/shivachandel","slug":"shivachandel","maxFileSizeBytes":null,"userTier":0,"organizationMemberCount":null}],"referrer":null,"convertToStandardCsvFormat":false,"overview":"","description":"","actions":[],"flags":[],"title":"kc_house_data","slug":"kc-house-data","licenseId":12,"data":{"firestorePath":"UmIZ4Y18U3EKKHL35VYX/versions/wWO5VFJNuKem3dLvpqnY","databundleVersionId":41689,"databundle":{"type":"databundle","databundleInfo":{"currentDatabundleVersionId":41689,"databundleType":"dataset","diffType":"versioned","creationDate":"2018-06-11T08:38:54.3367663Z","creatorUserId":1640476,"removalDate":null,"currentGoodVersionKey":"wWO5VFJNuKem3dLvpqnY","lastestVersionKey":"wWO5VFJNuKem3dLvpqnY","versions":{"totalChildren":1,"count":0,"children":[]}},"datasetInfo":{"datasetId":30990,"datasetSlug":"/shivachandel/kc-house-data","isPrivate":false},"competitionInfo":null,"remoteDatasourceInfo":null,"bigqueryInfo":null,"githubInfo":null,"key":"UmIZ4Y18U3EKKHL35VYX","path":"UmIZ4Y18U3EKKHL35VYX","legacyEntityId":33147,"relativeUrl":"","name":"kc_house_data","description":null},"databundleVersion":{"type":"databundleVersion","databundleVersionInfo":{"versionNumber":1,"versionNotes":"Initial release","creatorUserId":1640476,"creationDate":"2018-06-11T08:38:54.3367663Z","removalDate":null,"databundleVersionType":"fileset","objectTypeCount":{}},"datasetVersionInfo":{"datasetVersionId":39532},"statusInfo":{"status":"ready","statusMessage":"Ready","percentageCompleted":1.0},"exceptionInfo":{"criticalException":null,"warningExceptions":[]},"filesetInfo":{"totalSize":2381977,"directories":{"totalChildren":0,"count":0,"children":[]},"files":{"totalChildren":1,"count":0,"children":[]}},"originalCompressionInfo":null,"bundleCompressionInfo":{"filename":"archive.zip","fileExtension":".zip","fileSize":788976,"contentEncoding":"application/zip","contentMD5":"3V8RxO4DhIumWMMdqspl9g==","archiveGcsUrl":"gs://kaggle-data-sets/30990/39532/bundle/archive.zip","creationLastUpdate":"2019-10-01T12:15:02.1475571Z","creationPercentComplete":1.0},"bigquerySnapshotInfo":null,"storageInfo":{"uploadDataLocation":{"bucket":"kaggle-data-sets","path":"30990/39532/upload"},"rawDataLocation":{"bucket":"kagglesdsdata","path":"datasets/30990/39532"},"individualCompressedLocation":{"bucket":"kaggle-data-sets","path":"30990/39532/compressed"},"bundleArchiveLocation":{"bucket":"kaggle-data-sets","path":"30990/39532/bundle/archive.zip"},"fileSystemLocation":{"bucket":"kaggle-data-sources","path":"datasets/30990/39532/fs/embedded_fs"}},"fileSummaryInfo":{"fileTypes":[{"extension":".csv","fileCount":1,"totalSize":2381977}],"sampleFileNames":["kc_house_data.csv"],"totalFileCount":1},"columnSummaryInfo":{"columnTypes":[{"columnType":"Integer","columnCount":14,"rowCount":302582},{"columnType":"Decimal","columnCount":4,"rowCount":86452},{"columnType":"Id","columnCount":1,"rowCount":21613},{"columnType":"String","columnCount":1,"rowCount":21613},{"columnType":"Latitude","columnCount":1,"rowCount":21613}],"sampleColumnNames":["view","waterfront","floors","sqft_lot","sqft_living","bathrooms","bedrooms","price","date","id"],"totalColumnCount":21},"externalCopyInfo":null,"originalRemoteUrlInfo":null,"key":"wWO5VFJNuKem3dLvpqnY","path":"UmIZ4Y18U3EKKHL35VYX/versions/wWO5VFJNuKem3dLvpqnY","legacyEntityId":41689,"relativeUrl":"","name":"Version 1","description":"Initial release"}},"isPrivate":false,"owner":{"id":1640476,"imageUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/1640476-gp.jpg","isOrganization":false,"name":"Shiva Chandel","profileUrl":"/shivachandel","slug":"shivachandel","maxFileSizeBytes":null,"userTier":0,"organizationMemberCount":null}});performance && performance.mark && performance.mark("DatasetContainer.componentCouldBootstrap");</script><script nonce="Klj5Av1U48PG5v1fIxp3Dw==" type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+    preferredFont: "TeX",
+    availableFonts: ["STIX", "TeX"],
+    linebreaks: {
+    automatic: true
+    },
+    EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+    inlineMath: [["\\(", "\\)"], ["\\\\(", "\\\\)"]],
+    displayMath: [["$$", "$$"], ["\\[", "\\]"]],
+    processEscapes: true,
+    ignoreClass: "tex2jax_ignore|dno"
+    },
+    TeX: {
+    noUndefined: {
+    attributes: {
+    mathcolor: "red",
+    mathbackground: "#FFEEEE",
+    mathsize: "90%"
+    }
+    }
+    },
+    Macros: {
+    href: "{}"
+    },
+    skipStartupTypeset: true,
+    messageStyle: "none",
+    extensions: [],
+    });
+</script>
+<script type="text/javascript" nonce="Klj5Av1U48PG5v1fIxp3Dw==">
+  window.addEventListener("DOMContentLoaded", () => {
+    const head = document.getElementsByTagName("head")[0];
+    const useProdHosts = ["www.kaggle.com", "admin.kaggle.com"];
+    const subdomain = useProdHosts.includes(window.location.hostname) ? "www" : "staging";
+
+    const lib = document.createElement("script");
+    lib.type = "text/javascript";
+    lib.src = `https://${subdomain}.kaggleusercontent.com/static/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML`;
+    head.appendChild(lib);
+  });
+</script>
+
+
+</div>
+
+
+
+
+  </main>
+</body>
+
+</html>
