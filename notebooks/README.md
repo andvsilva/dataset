@@ -135,6 +135,20 @@ dtype: int64
 >>>
 ```
 
+## Tasks
+
+```bash
+## Done so far 2021-07-20 11h32
+- impute mode (category feature) and mean value to the missing data
+- convert object (string) to category
+- convert object (number) to float64
+
+# Next thing to do
+- Check for outliers.
+
+# To prepare the dataset feather file format to feature selection
+```
+
 
 
 ### resources
