@@ -138,19 +138,20 @@ dtype: int64
 ## Tasks
 
 ```bash
+@andvsilva
 ## Done so far 2021-07-20 11h32
 - impute mode (category feature) and mean value to the missing data
 - convert object (string) to category
 - convert object (number) to float64
 
-# Next thing to do
+# Next thing to do  2021-07-21 17h18
 - Check for outliers.
+- Using boxplot to look for outlier for each column.
 
 # To prepare the dataset feather file format to feature selection
 ```
-
-
-
 ### resources
 
 - [A Straightforward Guide to Cleaning and Preparing Data in Python](https://towardsdatascience.com/a-straightforward-guide-to-cleaning-and-preparing-data-in-python-8c82f209ae33)
+- [Ways to Detect and Remove the Outliers](https://towardsdatascience.com/ways-to-detect-and-remove-the-outliers-404d16608dba)
+- [Detecting And Treating Outliers In Python — Part 1](https://towardsdatascience.com/detecting-and-treating-outliers-in-python-part-1-4ece5098b755)
