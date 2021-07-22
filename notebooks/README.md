@@ -166,7 +166,22 @@ dtype: int64
 # 28 - total_pymnt_inv: .......Payments received to date for portion of total amount funded by investors
 # 29 - total_rec_int: .......Interest received to date
 # 30 - total_rec_late_fee: .......Late fees received to date
-# 31 - total_rec_prncp: .......Principal received to date
+# 32 - pub_rec_bankruptcies: .......Number of public record bankruptcies
+# 33 - pymnt_plan: .......Indicates if a payment plan has been put in place for the loan
+# 34 - recoveries: .......post charge off gross recovery
+# 35 - revol_bal: .......Total credit revolving balance
+# 36 - revol_util: .......Revolving line utilization rate, or the amount of credit the borrower is using relative to all available revolving credit.
+# 37 - sub_grade: .......LC assigned loan subgrade
+# 38 - tax_liens: .......Number of tax liens
+# 39 - term: .......The number of payments on the loan. Values are in months and can be either 36 or 60.
+# 40 - total_acc: .......The total number of credit lines currently in the borrower's credit file
+# 41 - total_pymnt: .......Payments received to date for total amount funded
+# 42 - total_pymnt_inv: .......Payments received to date for portion of total amount funded by investors
+# 43 - total_rec_int: .......Interest received to date
+# 44 - total_rec_late_fee: .......Late fees received to date
+# 45 - total_rec_prncp: .......Principal received to date
+# 46 - verification_status: .......Indicates if income was verified by LC, not verified, or if the income source was verified
+# 47 - zip_code: .......The first 3 numbers of the zip code provided by the borrower in the loan application.
 ```
 
 ## Tasks
