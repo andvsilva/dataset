@@ -143,6 +143,35 @@ $ pip3 install freeze
 $ pip3 freeze > requirements.txt
 ```
 
+## Download dataset from Kaggle using command line interface
+
+```bash
+# If you want make things much more fast, maybe this 
+# can help you
+# Install kaggle API.
+pip install --user kaggle
+
+# Go to your account on the kaggle and create API Token
+# https://www.kaggle.com/HERE-YOUR-USERNAME/account?isEditing=False
+
+# This will trigger the download of kaggle.json
+# mv kaggle.json ~/.kaggle
+
+ls ~/.kaggle/kaggle.json
+
+# For security, ensure that other users of your
+# computer do not have read access to your credentials.
+chmod 600 ~/.kaggle/kaggle.json
+
+# To check if this works?
+kaggle competitions download -c titanic
+ls
+titanic.zip
+
+# Or for general
+kaggle competitions download -c dataset_name
+```
+
 ## Referências
 
 - [Data Science Starter Kit](https://towardsdatascience.com/data-science-starter-kit-2d8e2291914b): A guide for getting started in data science (**Very good**)
