@@ -79,15 +79,22 @@ max     -114.310000     41.950000  ...      15.000100       500001.000000
 ### Estrutura do Repositório
 
 ```Bash
-$ tree
+$ tree                                                                                                                         3ms 
 .
 ├── commit.sh
 ├── data
 │   ├── cumulative.csv
 │   ├── cumulative_nohead.csv
+│   ├── dataset_cleaning.ftr
 │   ├── dataset_featureselect.ftr
 │   ├── dataset_preprocessed.ftr
-│   └── housing.csv
+│   ├── diabetes.csv
+│   ├── housing.csv
+│   ├── kc-house-data
+│   ├── kc_house_data.csv
+│   ├── LCDataDictionary.csv
+│   └── lending_club_loans.csv
+├── exploredata.ipynb
 ├── notebooks
 │   ├── catboost_info
 │   │   ├── catboost_training.json
@@ -96,9 +103,11 @@ $ tree
 │   │   ├── learn_error.tsv
 │   │   ├── time_left.tsv
 │   │   └── tmp
+│   ├── cleaning.ipynb
 │   ├── exploredata.ipynb
 │   ├── feature_selection.ipynb
 │   ├── figures
+│   │   ├── data_science_landscape.png
 │   │   ├── feature_importance_model_CatBoost.pdf
 │   │   ├── feature_importance_model_CatBoost.png
 │   │   ├── feature_importance_model_DecisionTree.pdf
@@ -108,6 +117,10 @@ $ tree
 │   │   ├── feature_importance_model_XGBoost.pdf
 │   │   └── feature_importance_model_XGBoost.png
 │   ├── modeling.ipynb
+│   ├── modeling_stacking.ipynb
+│   ├── README.md
+│   ├── reports
+│   │   └── lending_club_loans.html
 │   └── requirements.txt
 ├── README.md
 └── scripts
@@ -118,16 +131,29 @@ $ tree
     │   ├── learn_error.tsv
     │   ├── time_left.tsv
     │   └── tmp
+    ├── cleaning.py
     ├── feature_engineering.py
     ├── figures
+    │   ├── feature_importance_model_CatBoost.pdf
+    │   ├── feature_importance_model_CatBoost.png
+    │   ├── feature_importance_model_DecisionTree.pdf
+    │   ├── feature_importance_model_DecisionTree.png
+    │   ├── feature_importance_model_RandomForest.pdf
+    │   ├── feature_importance_model_RandomForest.png
+    │   ├── feature_importance_model_XGBoost.pdf
+    │   ├── feature_importance_model_XGBoost.png
+    │   ├── scores_importance_models.pdf
+    │   └── scores_models.png
     ├── logs
+    │   ├── feature-eng.dat
+    │   ├── info-preprocess.dat
+    │   └── modeling.dat
     ├── master.py
     ├── modeling.py
     ├── preprocessing.py
     └── requirements.txt
 
-12 directories, 32 files
-
+13 directories, 58 files
 ```
 
 - [requirements.txt](requirements.txt) - Lista de bibliotecas utilizadas no projeto. Para instalar essas bibliotecas, basta fazer 
@@ -156,7 +182,6 @@ pip install --user kaggle
 
 # This will trigger the download of kaggle.json
 # mv kaggle.json ~/.kaggle
-
 ls ~/.kaggle/kaggle.json
 
 # For security, ensure that other users of your

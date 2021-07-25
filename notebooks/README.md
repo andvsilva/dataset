@@ -1,4 +1,4 @@
-# Data Science - Landscape
+a# Data Science - Landscape
 
 Here I will describe in details each step to do a Machine Learning (ML) project. In the Figure below, we will following this roadmap to guide our studies in data science.
 
@@ -188,25 +188,32 @@ dtype: int64
 
 ```bash
 @andvsilva
-## Done so far 2021-07-20 11h32
+## Done so far 2021-07-20 11h32 
 - impute mode (category feature) and mean value to the missing data
 - convert object (string) to category
 - convert object (number) to float64
 
-# Next thing to do  2021-07-21 17h18
+# Next thing to do  2021-07-21 17h18 - done
 - Check for outliers.
 - Using boxplot to look for outlier for each column.
 
-
+# Sat Jul 24 21:15:40 -03 2021 done
 # Working on - Exploring it and understanding what feature 
-# each column represents.
+# each column represents. 
+A nice way to show the data is using 'pandas_profiling' 
+(see the documentation for more information, link in resources)
+
+# Next explore dataset in more details
 
 - dictionary features - notebook - cleaning already.
 
 # To prepare the dataset feather file format to feature selection
 ```
+
+- [report-lending_club_loans.html](notebooks/reports/lending_club_loans.html)
 ### resources
 
 - [A Straightforward Guide to Cleaning and Preparing Data in Python](https://towardsdatascience.com/a-straightforward-guide-to-cleaning-and-preparing-data-in-python-8c82f209ae33)
 - [Ways to Detect and Remove the Outliers](https://towardsdatascience.com/ways-to-detect-and-remove-the-outliers-404d16608dba)
 - [Detecting And Treating Outliers In Python — Part 1](https://towardsdatascience.com/detecting-and-treating-outliers-in-python-part-1-4ece5098b755)
+- [Pandas Profiling](https://pandas-profiling.github.io/pandas-profiling/docs/master/index.html)
