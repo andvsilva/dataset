@@ -1,4 +1,4 @@
-a# Data Science - Landscape
+# Data Science - Landscape
 
 Here I will describe in details each step to do a Machine Learning (ML) project. In the Figure below, we will following this roadmap to guide our studies in data science.
 
