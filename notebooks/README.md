@@ -218,14 +218,19 @@ A nice way to show the data is using 'pandas_profiling'
 # features can be removed:
 
 features2removed = ['id', 'member_id', 'funded_amnt', 'funded_amnt_inv',
-                    'sub_grade', 'int_rate']
+                    'sub_grade', 'int_rate', 'zip_code','out_prncp','out_prncp_inv',
+                    'total_pymnt','total_pymnt_inv', 'total_rec_prncp','total_rec_int',
+                    'total_rec_late_fee','recoveries',
+                    'collection_recovery_fee', 'last_pymnt_d']
 
 df = df.drop(features2removed, axis=1)
 
 # drop the column 'issued_d' - leaks data from the future.
 
-- dictionary features - notebook - cleaning already.
+Number of rows.....................: 39786
+Number of columns..................: 23
 
+- dictionary features - notebook - cleaning already.
 # To prepare the dataset feather file format to feature selection
 ```
 
