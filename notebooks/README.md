@@ -20,6 +20,12 @@ First, we will explore the dataset using some techniques to make the data cleani
 - ```>>> dataset: data/lending_club_loans.csv```
 
 ```bash
+>>> OBJETIVE:
+Building a model to predict wether borrowers are likely
+to pay or default on their loans
+```
+
+```bash
 $ python
 Python 3.7.9 (default, Aug 31 2020, 12:42:55) 
 [GCC 7.3.0] :: Anaconda, Inc. on linux
@@ -207,9 +213,22 @@ A nice way to show the data is using 'pandas_profiling'
 ## Tue Jul 27 17:11:31 -03 2021  (Work in progress)
 - delete features and impute mean and median to missing value
 
+# After analyzing the columns and considering the model we’re 
+# trying to build, we can conclude that the following 
+# features can be removed:
+
+features2removed = ['id', 'member_id', 'funded_amnt', 'funded_amnt_inv',
+                    'sub_grade', 'int_rate']
+
+df = df.drop(features2removed, axis=1)
+
+# drop the column 'issued_d' - leaks data from the future.
+
 - dictionary features - notebook - cleaning already.
 
 # To prepare the dataset feather file format to feature selection
+
+
 ```
 
 - [report-lending_club_loans.html](notebooks/reports/lending_club_loans.html)
