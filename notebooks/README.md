@@ -227,8 +227,6 @@ df = df.drop(features2removed, axis=1)
 - dictionary features - notebook - cleaning already.
 
 # To prepare the dataset feather file format to feature selection
-
-
 ```
 
 - [report-lending_club_loans.html](notebooks/reports/lending_club_loans.html)
