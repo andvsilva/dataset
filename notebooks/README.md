@@ -176,7 +176,12 @@ TARGET >>> loan_status: .......Current status of the loan
  'Late (16-30 days)': '0.00%',
  'In Grace Period': '0.00%',
  'Default': '0.00%'}
+
+To predict which of 'Fully Paid' or 'Charged Off' a loan will fall under, 
+so we can treat the problem as binary classification.
 ```
+
+![](pictures/target_stat.png)
 
 ## Tasks
 
