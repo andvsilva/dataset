@@ -184,6 +184,12 @@ so we can treat the problem as binary classification.
 
 ![](pictures/target_stat.png)
 
+```bash
+Investigating FICO Score Columns
+```
+
+![](pictures/fico_range_stat.png)
+
 ## Tasks
 
 ```bash
