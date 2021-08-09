@@ -167,6 +167,7 @@ dtype: int64
 ```
 
 ```bash
+## Sun Aug  8 20:15:20 -03 2021
 TARGET >>> loan_status: .......Current status of the loan
 
 {'Fully Paid': '85.73%',
@@ -218,10 +219,22 @@ features2removed = ['id', 'member_id', 'funded_amnt', 'funded_amnt_inv',
 
 df = df.drop(features2removed, axis=1)
 
+## Sun Aug  8 20:15:20 -03 2021 Done
+TARGET >>> loan_status: .......Current status of the loan
+
+{'Fully Paid': '85.73%',
+ 'Charged Off': '14.23%',}
+
+To predict which of 'Fully Paid' or 'Charged Off' a loan will fall under, 
+so we can treat the problem as binary classification.
+
 # drop the column 'issued_d' - leaks data from the future.
 
-Number of rows.....................: 39786
-Number of columns..................: 23
+Number of rows.....................: 39239
+Number of columns..................: 32
+
+#Sun Aug  8 21:07:38 -03 2021
+Investigating FICO Score Columns
 
 - dictionary features - notebook - cleaning already.
 # To prepare the dataset feather file format to feature selection
