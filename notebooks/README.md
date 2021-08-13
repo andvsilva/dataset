@@ -1,4 +1,4 @@
-a# Data Science - Landscape
+# Data Science - Landscape
 
 Here I will describe in details each step to do a Machine Learning (ML) project. In the Figure below, we will following this roadmap to guide our studies in data science.
 
@@ -12,12 +12,17 @@ Here I will describe in details each step to do a Machine Learning (ML) project.
 - Obtaining Data
 - Feature Engineering
 - Feature Selection
-
 ### Hands on data cleaning
 
 First, we will explore the dataset using some techniques to make the data cleaning process.
 
 - ```>>> dataset: data/lending_club_loans.csv```
+
+```bash
+>>> OBJETIVE:
+Building a model to predict wether borrowers are likely
+to pay or default on their loans
+```
 
 ```bash
 $ python
@@ -136,53 +141,54 @@ dtype: int64
 
 # dictionary feature 
 
-# 1 - annual_inc: .......The self-reported annual income provided by the borrower during registration.
-# 2 - chargeoff_within_12_mths: .......Number of charge-offs within 12 months
-# 3 - collection_recovery_fee: .......post charge off collection fee
-# 4 - collections_12_mths_ex_med: .......Number of collections in 12 months excluding medical collections
-# 5 - delinq_2yrs: .......The number of 30+ days past-due incidences of delinquency in the borrower's credit file for the past 2 years
-# 6 - delinq_amnt: .......The past-due amount owed for the accounts on which the borrower is now delinquent.
-# 7 - dti: .......A ratio calculated using the borrower’s total monthly debt payments on the total debt obligations, excluding mortgage and the requested LC loan, divided by the borrower’s self-reported monthly income.
-# 8 - funded_amnt: .......The total amount committed to that loan at that point in time.
-# 9 - funded_amnt_inv: .......The total amount committed by investors for that loan at that point in time.
-# 10 - id: .......A unique LC assigned ID for the loan listing.
-# 11 - inq_last_6mths: .......The number of inquiries in past 6 months (excluding auto and mortgage inquiries)
-# 12 - installment: .......The monthly payment owed by the borrower if the loan originates.
-# 13 - int_rate: .......Interest Rate on the loan
-# 14 - last_pymnt_amnt: .......Last total payment amount received
-# 15 - loan_amnt: .......The listed amount of the loan applied for by the borrower. If at some point in time, the credit department reduces the loan amount, then it will be reflected in this value.
-# 16 - member_id: .......A unique LC assigned Id for the borrower member.
-# 17 - open_acc: .......The number of open credit lines in the borrower's credit file.
-# 18 - out_prncp: .......Remaining outstanding principal for total amount funded
-# 19 - out_prncp_inv: .......Remaining outstanding principal for portion of total amount funded by investors
-# 20 - pub_rec: .......Number of derogatory public records
-# 21 - pub_rec_bankruptcies: .......Number of public record bankruptcies
-# 22 - recoveries: .......post charge off gross recovery
-# 23 - revol_bal: .......Total credit revolving balance
-# 24 - revol_util: .......Revolving line utilization rate, or the amount of credit the borrower is using relative to all available revolving credit.
-# 25 - tax_liens: .......Number of tax liens
-# 26 - total_acc: .......The total number of credit lines currently in the borrower's credit file
-# 27 - total_pymnt: .......Payments received to date for total amount funded
-# 28 - total_pymnt_inv: .......Payments received to date for portion of total amount funded by investors
-# 29 - total_rec_int: .......Interest received to date
-# 30 - total_rec_late_fee: .......Late fees received to date
-# 32 - pub_rec_bankruptcies: .......Number of public record bankruptcies
-# 33 - pymnt_plan: .......Indicates if a payment plan has been put in place for the loan
-# 34 - recoveries: .......post charge off gross recovery
-# 35 - revol_bal: .......Total credit revolving balance
-# 36 - revol_util: .......Revolving line utilization rate, or the amount of credit the borrower is using relative to all available revolving credit.
-# 37 - sub_grade: .......LC assigned loan subgrade
-# 38 - tax_liens: .......Number of tax liens
-# 39 - term: .......The number of payments on the loan. Values are in months and can be either 36 or 60.
-# 40 - total_acc: .......The total number of credit lines currently in the borrower's credit file
-# 41 - total_pymnt: .......Payments received to date for total amount funded
-# 42 - total_pymnt_inv: .......Payments received to date for portion of total amount funded by investors
-# 43 - total_rec_int: .......Interest received to date
-# 44 - total_rec_late_fee: .......Late fees received to date
-# 45 - total_rec_prncp: .......Principal received to date
-# 46 - verification_status: .......Indicates if income was verified by LC, not verified, or if the income source was verified
-# 47 - zip_code: .......The first 3 numbers of the zip code provided by the borrower in the loan application.
+# 1 - addr_state: .......The state provided by the borrower in the loan application
+# 2 - annual_inc: .......The self-reported annual income provided by the borrower during registration.
+# 3 - delinq_2yrs: .......The number of 30+ days past-due incidences of delinquency in the borrower's credit file for the past 2 years
+# 4 - dti: .......A ratio calculated using the borrower’s total monthly debt payments on the total debt obligations, excluding mortgage and the requested LC loan, divided by the borrower’s self-reported monthly income.
+# 5 - earliest_cr_line: .......The month the borrower's earliest reported credit line was opened
+# 6 - emp_length: .......Employment length in years. Possible values are between 0 and 10 where 0 means less than one year and 10 means ten or more years. 
+# 7 - grade: .......LC assigned loan grade
+# 8 - home_ownership: .......The home ownership status provided by the borrower during registration. Our values are: RENT, OWN, MORTGAGE, OTHER.
+# 9 - inq_last_6mths: .......The number of inquiries in past 6 months (excluding auto and mortgage inquiries)
+# 10 - installment: .......The monthly payment owed by the borrower if the loan originates.
+# 11 - issue_d: .......The month which the loan was funded
+# 12 - last_credit_pull_d: .......The most recent month LC pulled credit for this loan
+# 13 - last_pymnt_amnt: .......Last total payment amount received
+# 14 - loan_amnt: .......The listed amount of the loan applied for by the borrower. If at some point in time, the credit department reduces the loan amount, then it will be reflected in this value.
+# 15 - loan_status: .......Current status of the loan
+# 16 - open_acc: .......The number of open credit lines in the borrower's credit file.
+# 17 - pub_rec: .......Number of derogatory public records
+# 18 - pub_rec_bankruptcies: .......Number of public record bankruptcies
+# 19 - revol_bal: .......Total credit revolving balance
+# 20 - revol_util: .......Revolving line utilization rate, or the amount of credit the borrower is using relative to all available revolving credit.
+# 21 - term: .......The number of payments on the loan. Values are in months and can be either 36 or 60.
+# 22 - total_acc: .......The total number of credit lines currently in the borrower's credit file
+# 23 - verification_status: .......Indicates if income was verified by LC, not verified, or if the income source was verified
 ```
+
+```bash
+## Sun Aug  8 20:15:20 -03 2021
+TARGET >>> loan_status: .......Current status of the loan
+
+{'Fully Paid': '85.73%',
+ 'Charged Off': '14.23%',
+ 'Late (31-120 days)': '0.03%',
+ 'Current': '0.01%',
+ 'Late (16-30 days)': '0.00%',
+ 'In Grace Period': '0.00%',
+ 'Default': '0.00%'}
+
+To predict which of 'Fully Paid' or 'Charged Off' a loan will fall under, 
+so we can treat the problem as binary classification.
+```
+
+![](pictures/target_stat.png)
+
+```bash
+Investigating FICO Score Columns
+```
+
+![](pictures/fico_range_stat.png)
 
 ## Tasks
 
@@ -204,9 +210,39 @@ A nice way to show the data is using 'pandas_profiling'
 (see the documentation for more information, link in resources)
 
 # Next explore dataset in more details
+## Tue Jul 27 17:11:31 -03 2021  (Work in progress)
+- delete features and impute mean and median to missing value
+
+# After analyzing the columns and considering the model we’re 
+# trying to build, we can conclude that the following 
+# features can be removed:
+
+features2removed = ['id', 'member_id', 'funded_amnt', 'funded_amnt_inv',
+                    'sub_grade', 'int_rate', 'zip_code','out_prncp','out_prncp_inv',
+                    'total_pymnt','total_pymnt_inv', 'total_rec_prncp','total_rec_int',
+                    'total_rec_late_fee','recoveries',
+                    'collection_recovery_fee', 'last_pymnt_d']
+
+df = df.drop(features2removed, axis=1)
+
+## Sun Aug  8 20:15:20 -03 2021 Done
+TARGET >>> loan_status: .......Current status of the loan
+
+{'Fully Paid': '85.73%',
+ 'Charged Off': '14.23%',}
+
+To predict which of 'Fully Paid' or 'Charged Off' a loan will fall under, 
+so we can treat the problem as binary classification.
+
+# drop the column 'issued_d' - leaks data from the future.
+
+Number of rows.....................: 39239
+Number of columns..................: 32
+
+#Sun Aug  8 21:07:38 -03 2021
+Investigating FICO Score Columns
 
 - dictionary features - notebook - cleaning already.
-
 # To prepare the dataset feather file format to feature selection
 ```
 
