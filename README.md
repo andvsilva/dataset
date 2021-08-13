@@ -73,9 +73,75 @@ max     -114.310000     41.950000  ...      15.000100       500001.000000
 4 - Evalutation model
  
 - [ ] Evaluate modeling (**WIP**)
-- [ ] What we can improve? (**WIP**)
-- 
+- [ ] What we can improve? (**WIP**) 
 
+## Dataset - Club Loans
+- ```data/lending_club_loans_2007_2011.csv```
+
+```bash
+>>> df.info()
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 42538 entries, 0 to 42537
+Data columns (total 54 columns):
+ #   Column                      Non-Null Count  Dtype  
+---  ------                      --------------  -----  
+ 0   id                          42538 non-null  object 
+ 1   member_id                   42535 non-null  float64
+ 2   loan_amnt                   42535 non-null  float64
+ 3   funded_amnt                 42535 non-null  float64
+ 4   funded_amnt_inv             42535 non-null  float64
+ 5   term                        42535 non-null  object 
+ 6   int_rate                    42535 non-null  object 
+ 7   installment                 42535 non-null  float64
+ 8   grade                       42535 non-null  object 
+ 9   sub_grade                   42535 non-null  object 
+ 10  emp_title                   39909 non-null  object 
+ 11  emp_length                  41423 non-null  object 
+ 12  home_ownership              42535 non-null  object 
+ 13  annual_inc                  42531 non-null  float64
+ 14  verification_status         42535 non-null  object 
+ 15  issue_d                     42535 non-null  object 
+ 16  loan_status                 42535 non-null  object 
+ 17  purpose                     42535 non-null  object 
+ 18  title                       42522 non-null  object 
+ 19  zip_code                    42535 non-null  object 
+ 20  addr_state                  42535 non-null  object 
+ 21  dti                         42535 non-null  float64
+ 22  delinq_2yrs                 42506 non-null  float64
+ 23  earliest_cr_line            42506 non-null  object 
+ 24  fico_range_low              42535 non-null  float64
+ 25  fico_range_high             42535 non-null  float64
+ 26  inq_last_6mths              42506 non-null  float64
+ 27  open_acc                    42506 non-null  float64
+ 28  pub_rec                     42506 non-null  float64
+ 29  revol_bal                   42535 non-null  float64
+ 30  revol_util                  42445 non-null  object 
+ 31  total_acc                   42506 non-null  float64
+ 32  out_prncp                   42535 non-null  float64
+ 33  out_prncp_inv               42535 non-null  float64
+ 34  total_pymnt                 42535 non-null  float64
+ 35  total_pymnt_inv             42535 non-null  float64
+ 36  total_rec_prncp             42535 non-null  float64
+ 37  total_rec_int               42535 non-null  float64
+ 38  total_rec_late_fee          42535 non-null  float64
+ 39  recoveries                  42535 non-null  float64
+ 40  collection_recovery_fee     42535 non-null  float64
+ 41  last_pymnt_d                42452 non-null  object 
+ 42  last_pymnt_amnt             42535 non-null  float64
+ 43  last_credit_pull_d          42531 non-null  object 
+ 44  last_fico_range_high        42535 non-null  float64
+ 45  last_fico_range_low         42535 non-null  float64
+ 46  collections_12_mths_ex_med  42390 non-null  float64
+ 47  policy_code                 42535 non-null  float64
+ 48  application_type            42535 non-null  object 
+ 49  acc_now_delinq              42506 non-null  float64
+ 50  chargeoff_within_12_mths    42390 non-null  float64
+ 51  delinq_amnt                 42506 non-null  float64
+ 52  pub_rec_bankruptcies        41170 non-null  float64
+ 53  tax_liens                   42430 non-null  float64
+dtypes: float64(34), object(20)
+memory usage: 17.5+ MB
+```
 ### Estrutura do Repositório
 
 ```Bash
