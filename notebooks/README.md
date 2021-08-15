@@ -151,17 +151,17 @@ dtype: int64
 # 8 - home_ownership: .......The home ownership status provided by the borrower during registration. Our values are: RENT, OWN, MORTGAGE, OTHER.
 # 9 - inq_last_6mths: .......The number of inquiries in past 6 months (excluding auto and mortgage inquiries)
 # 10 - installment: .......The monthly payment owed by the borrower if the loan originates.
-# 11 - issue_d: .......The month which the loan was funded
-# 12 - last_credit_pull_d: .......The most recent month LC pulled credit for this loan
-# 13 - last_pymnt_amnt: .......Last total payment amount received
-# 14 - loan_amnt: .......The listed amount of the loan applied for by the borrower. If at some point in time, the credit department reduces the loan amount, then it will be reflected in this value.
-# 15 - loan_status: .......Current status of the loan
-# 16 - open_acc: .......The number of open credit lines in the borrower's credit file.
-# 17 - pub_rec: .......Number of derogatory public records
-# 18 - pub_rec_bankruptcies: .......Number of public record bankruptcies
-# 19 - revol_bal: .......Total credit revolving balance
-# 20 - revol_util: .......Revolving line utilization rate, or the amount of credit the borrower is using relative to all available revolving credit.
-# 21 - term: .......The number of payments on the loan. Values are in months and can be either 36 or 60.
+# 11 - last_credit_pull_d: .......The most recent month LC pulled credit for this loan
+# 12 - loan_amnt: .......The listed amount of the loan applied for by the borrower. If at some point in time, the credit department reduces the loan amount, then it will be reflected in this value.
+# 13 - loan_status: .......Current status of the loan
+# 14 - open_acc: .......The number of open credit lines in the borrower's credit file.
+# 15 - pub_rec: .......Number of derogatory public records
+# 16 - pub_rec_bankruptcies: .......Number of public record bankruptcies
+# 17 - purpose: .......A category provided by the borrower for the loan request. 
+# 18 - revol_bal: .......Total credit revolving balance
+# 19 - revol_util: .......Revolving line utilization rate, or the amount of credit the borrower is using relative to all available revolving credit.
+# 20 - term: .......The number of payments on the loan. Values are in months and can be either 36 or 60.
+# 21 - title: .......The loan title provided by the borrower
 # 22 - total_acc: .......The total number of credit lines currently in the borrower's credit file
 # 23 - verification_status: .......Indicates if income was verified by LC, not verified, or if the income source was verified
 ```
@@ -236,15 +236,52 @@ so we can treat the problem as binary classification.
 
 # drop the column 'issued_d' - leaks data from the future.
 
-Number of rows.....................: 39239
-Number of columns..................: 32
+Number of rows.....................: 38492
+Number of columns..................: 24
 
 #Sun Aug  8 21:07:38 -03 2021
 Investigating FICO Score Columns
 
 - dictionary features - notebook - cleaning already.
 # To prepare the dataset feather file format to feature selection
+
 ```
+```bash
+## Modeling - 
+ic| names: ['RandomForest', 'XGBoost', 'CatBoost']
+ic| results: [0.861198738170347, 0.8606420486175542, 0.8708480237520876]
+```
+
+![](pictures/scores_models.png)
+
+```bash
+# feature importance:
+
+model: CatBoost
+loan_amnt.......: 3.05 %
+term.......: 1.86 %
+installment.......: 3.85 %
+grade.......: 3.33 %
+emp_length.......: 2.93 %
+annual_inc.......: 6.9 %
+purpose.......: 3.16 %
+title.......: 4.9 %
+dti.......: 4.12 %
+delinq_2yrs.......: 0.58 %
+earliest_cr_line.......: 4.16 %
+inq_last_6mths.......: 2.34 %
+open_acc.......: 2.63 %
+pub_rec.......: 0.33 %
+revol_bal.......: 4.77 %
+revol_util.......: 4.11 %
+total_acc.......: 4.81 %
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>'last_credit_pull_d.......: 38.51 %'
+pub_rec_bankruptcies.......: 0.31 %
+fico_average.......: 3.34 %
+```
+![](figures/feature_importance_model_CatBoost.png)
+
+
 
 - [report-lending_club_loans.html](notebooks/reports/lending_club_loans.html)
 ### resources
