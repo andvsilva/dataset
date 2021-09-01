@@ -222,6 +222,26 @@ $ tree                                                                          
 13 directories, 58 files
 ```
 
+## [MLFlow](https://mlflow.org/)
+
+### Install 
+```bash
+pip install mlflow
+```
+
+### Run
+
+```bash
+~/repo/dataset/examples
+
+$ mlflow run mlflow_housing -P k_features=8
+
+$ mlflow ui
+
+```
+
+
+
 - [requirements.txt](requirements.txt) - Lista de bibliotecas utilizadas no projeto. Para instalar essas bibliotecas, basta fazer 
 ```Bash
 $ pip3 install -r requirements.txt

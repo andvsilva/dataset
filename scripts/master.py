@@ -46,7 +46,7 @@ def main():
     print(">>> date: ", dt_string)
     
     # step 0    
-    os.system('pip3 install -r requirements.txt')
+    #os.system('pip3 install -r requirements.txt')
 
     # step 1
     os.system('python preprocessing.py') # > logs/info-preprocess.dat
