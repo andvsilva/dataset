@@ -6,6 +6,7 @@
 
 # libraries for this project
 import json
+from platform import python_version
 import pandas as pd
 import numpy as np
 from numpy import mean, std
@@ -44,6 +45,7 @@ import xgboost as xgb
 import catboost as cb
 from sklearn.linear_model import LinearRegression
 from sklearn.linear_model import LogisticRegression
+from sklearn.preprocessing     import LabelEncoder
 
 import warnings
 
@@ -111,7 +113,6 @@ print(df.dtypes)
 X = df.drop('median_house_value', axis=1) # drop the column target
 y = df['median_house_value'] # target
 
-
 # Here start mlflow run
 with mlflow.start_run():
     
@@ -135,19 +136,27 @@ with mlflow.start_run():
     # Regression models
     def get_models():
       models['RandomForest']=RandomForestRegressor(n_estimators=5, random_state = 42, n_jobs = -1)
-      models['DecisionTree']=DecisionTreeRegressor()
+      #models['DecisionTree']=DecisionTreeRegressor()
       #models['KNR']=KNeighborsRegressor()
-      models['XGBoost']=xgb.XGBRegressor(objective="reg:linear", random_state=42)
-      models['CatBoost'] = cb.CatBoostRegressor(loss_function='RMSE')
-      models['LinearR']= LinearRegression(n_jobs = -1) # Use all computer cores
+      #models['XGBoost']=xgb.XGBRegressor(objective="reg:linear", random_state=42)
+      #models['CatBoost'] = cb.CatBoostRegressor(loss_function='RMSE')
+      #models['LinearR']= LinearRegression(n_jobs = -1) # Use all computer cores
 
       return models
-
 
     models = dict()
     models = get_models()
 
     print(models)
+    
+    # instantiate labelencoder object
+    le = LabelEncoder()
+    categorical_cols = list(df.select_dtypes(['category']))
+    
+    # apply le on categorical feature columns
+    df[categorical_cols] = df[categorical_cols].apply(lambda col: le.fit_transform(col))
+    
+    df = df.tail(10)
 
     # evaluate the models and store results
     results, names = list(), list()
@@ -159,13 +168,16 @@ with mlflow.start_run():
         y = df['median_house_value'] # target
 
         pipe = pipeline_project(X, model)
+        
+        print(X)
+        print(y)
 
         ## Split-out validation dataset
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.14, random_state=1)
 
         ## Training the model
         #print('training the model...')
-
+             
         ## Fitting...
         pipe.fit(X_train, y_train)
 

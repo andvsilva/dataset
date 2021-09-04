@@ -50,10 +50,10 @@ def main():
     #os.system('pip3 install -r requirements.txt')
 
     # step 1
-    os.system('python preprocessing.py') # > logs/info-preprocess.dat
+    #os.system('python preprocessing.py') # > logs/info-preprocess.dat
     
     # step 2
-    os.system('python feature_engineering.py') # > logs/feature-eng.dat
+    #os.system('python feature_engineering.py') # > logs/feature-eng.dat
     
     # step 3
     os.system(f'python modeling.py {k_features}') # > logs/modeling.dat
