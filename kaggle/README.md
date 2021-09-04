@@ -20,8 +20,35 @@ mkdir ~/.kaggle/
 mv ~/.kaggle/kaggle.json
 
 # Done, now we can download from kaggle using API.
+
+# list datasets, e.g. dataset titanic
+
+$ ~/repo/dataset/data
+$ kaggle datasets list -s 'titanic'
 ```
 
+![API token](figures/dataset_list_titanic.png)
+
+# Hands on
+
+```bash
+$ kaggle datasets list -s 'NFL Play by Play 2009-2017'
+$ kaggle datasets download -d maxhorowitz/nflplaybyplay2009to2016
+
+$ kaggle datasets download -d maxhorowitz/nflplaybyplay2009to2016
+Downloading nflplaybyplay2009to2016.zip to ~/repo/dataset/data
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉| 274M/274M [00:43<00:00, 8.60MB/s]
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 274M/274M [00:43<00:00, 6.57MB/s]
+$ ls nflplaybyplay2009to2016.zip
+nflplaybyplay2009to2016.zip
+
+# Unzip
+$ unzip nflplaybyplay2009to2016.zip 
+Archive:  nflplaybyplay2009to2016.zip
+  inflating: NFL Play by Play 2009-2016 (v3).csv  
+  inflating: NFL Play by Play 2009-2017 (v4).csv  
+  inflating: NFL Play by Play 2009-2018 (v5).csv
+  ```
 
 
 ## Resources
