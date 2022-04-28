@@ -39,3 +39,13 @@ Sites explicativos
 - [avaliacao-de-performance](https://lapix.ufsc.br/ensino/reconhecimento-de-padroes/avaliando-validando-e-testando-o-seu-modelo-metodologias-de-avaliacao-de-performance/)
 
 [Monografia](https://www.lume.ufrgs.br/bitstream/handle/10183/219122/001123609.pdf?sequence=1)
+
+
+
+TODO
+
+- Organizar um repositorio - portifolio
+- Apresentacao
+  - Compreender o problema
+    - Definicao
+  - 
