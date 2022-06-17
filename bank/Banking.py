@@ -90,6 +90,18 @@ class banco:
             print(f"{Clientes['cod'][pos]}  {Clientes['nome'][pos]:>12} {Clientes['tel'][pos]:>28} {Clientes['cc'][pos]:>20} {Contas['saldo'][pos]: >15}")
             
 class cliente:
+    def Extrato():
+        print(">>>>>>>>  Extrato - Conta <<<<<<<<")
+        cod1 = input('\nInforme o codigo do cliente: ')
+        codv1 = cod1 in Clientes['cod'] # retorna True ou False
+        if codv1 == True:
+            pos1 = Clientes['cod'].index(cod1)
+            nome = Clientes['nome'][pos1]
+            cc = Clientes['cc'][pos1]
+            saldo = Contas['saldo'][pos1]
+            print("*****************************")
+            print(f'>>> Cliente: {nome} (Codigo: {cod1}) C.C. {cc}- Saldo: {saldo}')
+        
     def Transferencia():
         print(">>>>>>>>  Transferencia <<<<<<<<")
         cod1 = input('\nInforme o codigo do cliente que fara a transferencia: ')
@@ -110,7 +122,29 @@ class cliente:
             valor2 = Contas['saldo'][pos2]
             valor2 = valor2 + valorf
             Contas['saldo'][pos2] = valor2
+            
+            Transf['cod'] = cod1
 
-            print('Tranferencia realizada com sucesso!!')
+            print('Tranferencia realizada com sucesso!!!')
         else:
-            print("Contas Inválidas!!!")  
+            print("Contas Inválidas!!!")
+        
+    def Deposito():
+        print(">>>>>>>>  Deposito <<<<<<<<")
+        cod1 = input('\nInforme o codigo do cliente que recebera a Deposito: ')
+        codv1 = cod1 in Clientes['cod'] # retorna True ou False
+
+        #cod2 = input('\nInforme o codigo do cliente que recebera a transferencia: ')
+        #codv2 = cod2 in Clientes['cod'] # retorna True ou False
+
+        if codv1 == True:
+            pos1 = Clientes['cod'].index(cod1)
+
+            valorf = float(input('\n Informe o valor de Deposito: '))
+            valor1 = Contas['saldo'][pos1]
+            valor1 = valor1 + valorf
+            Contas['saldo'][pos1] = valor1   
+
+            print('Deposito realizado com sucesso!!!')
+        else:
+            print("Contas Inválidas!!!") 

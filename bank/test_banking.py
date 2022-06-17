@@ -25,3 +25,6 @@ print(Contas)
 bk.cliente.Transferencia()
 
 print(Contas)
+bk.cliente.Deposito()
+bk.cliente.Extrato()
+print(Contas)
