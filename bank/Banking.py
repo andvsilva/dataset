@@ -1,22 +1,19 @@
-
-
 Clientes = {'cod':[], 'nome': [], 'tel': [], 'cc': []}
 Contas = {'cod':[], 'saldo':[], 'tr':[]}
 Transf = {'cod':[], 'tipo':[],'origem':[],'destino': [], 'valor': []}
 
 numClientes = 0
-
 class banco:
-    def CadastrarCliente():
+    def CadastrarCliente(cod, nome, tel, cc, pdeposito):
         global numClientes
 
         if numClientes < 20:
             print(">>>>>>>> Cadastrar Cliente <<<<<<<<")
-            cod = input('\n Informe o código do cliente: ')
-            nome = input('\n Informe o nome do cliente: ')
-            tel = input('\n Informe o telefone do cliente: ')
-            cc = input('\n Informe o numero da conta corrente do cliente: ')
-            pdeposito = float(input("Informe o valor do deposito inicial: "))
+            #cod = input('\n Informe o código do cliente: ')
+            #nome = input('\n Informe o nome do cliente: ')
+            #tel = input('\n Informe o telefone do cliente: ')
+            #cc = input('\n Informe o numero da conta corrente do cliente: ')
+            #pdeposito = float(input("Informe o valor do deposito inicial: "))
 
             Clientes['cod'].append(cod)
             Clientes['nome'].append(nome)
@@ -32,9 +29,9 @@ class banco:
         
         return Clientes, Contas
 
-    def ConsultarCliente():
+    def ConsultarCliente(cod):
         print(">>>>>>>> Consulta Cliente <<<<<<<<")
-        cod = input('\n Informe o codigo do cliente: ')
+        #cod = input('\n Informe o codigo do cliente: ')
 
         codv = cod in Clientes['cod'] # retorna True ou False
 
@@ -46,14 +43,14 @@ class banco:
         else:
             print('Código Inválido!!')
     
-    def AtualizarCadastro():
+    def AtualizarCadastro(cod, novonome, novotel):
         print(">>>>>>>> Atualizar Cadastro <<<<<<<<")
-        cod = input('\n Informe o codigo do cliente: ')
+        #cod = input('\n Informe o codigo do cliente: ')
 
         codv = cod in Clientes['cod'] # retorna True ou False
         if codv == True:
-            novonome = input("Informe o novo nome do cliente: ")
-            novotel = input("Informe o novo telefone do cliente: ")
+            #novonome = input("Informe o novo nome do cliente: ")
+            #novotel = input("Informe o novo telefone do cliente: ")
 
             pos = Clientes['cod'].index(cod)
 
@@ -63,10 +60,10 @@ class banco:
         else:
             print('>>>> Codigo Invalido!!!')
             
-    def RemoverCliente():
+    def RemoverCliente(cod):
         global numClientes
         print(">>>>>>>>  Remover Cliente <<<<<<<<")
-        cod = input('\n Informe o codigo do cliente: ')
+        #cod = input('\n Informe o codigo do cliente: ')
         codv = cod in Clientes['cod'] # retorna True ou False
         
         if codv == True:
@@ -93,9 +90,9 @@ class banco:
             print(f"{Clientes['cod'][pos]}  {Clientes['nome'][pos]:>12} {Clientes['tel'][pos]:>28} {Clientes['cc'][pos]:>20} {Contas['saldo'][pos]: >15}")
             
 class cliente:
-    def Extrato():
+    def Extrato(cod1):
         print(">>>>>>>>  Extrato - Conta <<<<<<<<")
-        cod1 = input('\nInforme o codigo do cliente: ')
+        #cod1 = input('\nInforme o codigo do cliente: ')
         codv1 = cod1 in Clientes['cod'] # retorna True ou False
         if codv1 == True:
             pos1 = Clientes['cod'].index(cod1)
@@ -105,19 +102,19 @@ class cliente:
             print("*****************************")
             print(f'>>> Cliente: {nome} (Codigo: {cod1}) C.C. {cc}- Saldo: {saldo}')
         
-    def Transferencia():
+    def Transferencia(cod1, cod2, valorf):
         print(">>>>>>>>  Transferencia <<<<<<<<")
-        cod1 = input('\nInforme o codigo do cliente que fara a transferencia: ')
+        #cod1 = input('\nInforme o codigo do cliente que fara a transferencia: ')
         codv1 = cod1 in Clientes['cod'] # retorna True ou False
 
-        cod2 = input('\nInforme o codigo do cliente que recebera a transferencia: ')
+        #cod2 = input('\nInforme o codigo do cliente que recebera a transferencia: ')
         codv2 = cod2 in Clientes['cod'] # retorna True ou False
 
         if codv1 == True and codv2 == True:
             pos1 = Clientes['cod'].index(cod1)
             pos2 = Clientes['cod'].index(cod2)
 
-            valorf = float(input('\n Informe o valor de Transferencia: '))
+            #valorf = float(input('\n Informe o valor de Transferencia: '))
             valor1 = Contas['saldo'][pos1]
             valor1 = valor1 - valorf
             Contas['saldo'][pos1] = valor1   
@@ -132,15 +129,15 @@ class cliente:
             Transf['destino'] = Clientes['cc'][pos2]
             Transf['valor'] = valorf
             
-            Contas['tr'].append(Transf)
+            Contas['tr'].append(Transf.copy())
 
             print('Tranferencia realizada com sucesso!!!')
         else:
             print("Contas Inválidas!!!")
         
-    def Deposito():
+    def Deposito(cod1, valorf):
         print(">>>>>>>>  Deposito <<<<<<<<")
-        cod1 = input('\nInforme o codigo do cliente que recebera a Deposito: ')
+        #cod1 = input('\nInforme o codigo do cliente que recebera a Deposito: ')
         codv1 = cod1 in Clientes['cod'] # retorna True ou False
 
         #cod2 = input('\nInforme o codigo do cliente que recebera a transferencia: ')
@@ -149,7 +146,7 @@ class cliente:
         if codv1 == True:
             pos1 = Clientes['cod'].index(cod1)
 
-            valorf = float(input('\n Informe o valor de Deposito: '))
+            #valorf = float(input('\n Informe o valor de Deposito: '))
             valor1 = Contas['saldo'][pos1]
             valor1 = valor1 + valorf
             Contas['saldo'][pos1] = valor1   

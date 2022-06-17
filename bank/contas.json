@@ -1,0 +1,33 @@
+{
+    "cod": [
+        1258,
+        1259
+    ],
+    "saldo": [
+        1100,
+        1700
+    ],
+    "tr": [
+        {
+            "cod": 1258,
+            "tipo": "pix",
+            "origem": 125810,
+            "destino": 125910,
+            "valor": 600
+        },
+        {
+            "cod": 1259,
+            "tipo": "pix",
+            "origem": 125910,
+            "destino": 125810,
+            "valor": 200
+        },
+        {
+            "cod": 1258,
+            "tipo": "pix",
+            "origem": 125810,
+            "destino": 125910,
+            "valor": 100
+        }
+    ]
+}
