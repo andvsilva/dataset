@@ -124,6 +124,12 @@ class cliente:
             Contas['saldo'][pos2] = valor2
             
             Transf['cod'] = cod1
+            Transf['tipo'] = 'pix'
+            Transf['origem'] = Clientes['cc'][pos1]
+            Transf['destino'] = Clientes['cc'][pos2]
+            Transf['valor'] = valorf
+            
+            Contas['tr'] = Transf
 
             print('Tranferencia realizada com sucesso!!!')
         else:
