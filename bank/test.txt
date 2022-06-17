@@ -1,0 +1,95 @@
+>>>>>>>> Cadastrar Cliente <<<<<<<<
+
+ Informe o código do cliente: 1258
+
+ Informe o nome do cliente: AAAAAAAA
+
+ Informe o telefone do cliente: 6654646
+
+ Informe o numero da conta corrente do cliente: 125810
+Informe o valor do deposito inicial: 1000
+mais um cliente adicionado
+>>>>>>>> Cadastrar Cliente <<<<<<<<
+
+ Informe o código do cliente: 1259
+
+ Informe o nome do cliente: BBBBBBB
+
+ Informe o telefone do cliente: 313464
+
+ Informe o numero da conta corrente do cliente: 125910
+Informe o valor do deposito inicial: 1000
+mais um cliente adicionado
+>>>>>>>> Cadastrar Cliente <<<<<<<<
+
+ Informe o código do cliente: 1260
+
+ Informe o nome do cliente: CCCCCCC
+
+ Informe o telefone do cliente: 4646464
+
+ Informe o numero da conta corrente do cliente: 126010
+Informe o valor do deposito inicial: 1500
+mais um cliente adicionado
+{'cod': ['1258', '1259', '1260'], 'nome': ['AAAAAAAA', 'BBBBBBB', 'CCCCCCC'], 'tel': ['6654646', '313464', '4646464'], 'cc': ['125810', '125910', '126010']}
+{'cod': ['1258', '1259', '1260'], 'saldo': [1000.0, 1000.0, 1500.0], 'tr': []}
+>>>>>>>> Consulta Cliente <<<<<<<<
+
+ Informe o codigo do cliente: 1258
+Codigo        Nome             Telefone                Conta           Saldo
+1258      AAAAAAAA                6654646               125810          1000.0
+>>>>>>>> Atualizar Cadastro <<<<<<<<
+
+ Informe o codigo do cliente: 1258
+Informe o novo nome do cliente: AB           
+Informe o novo telefone do cliente: 3164646
+Dados do cliente atualizado!!!
+>>>>>>>> Consulta Cliente <<<<<<<<
+
+ Informe o codigo do cliente: 1258
+Codigo        Nome             Telefone                Conta           Saldo
+1258            AB                3164646               125810          1000.0
+>>>>>>>>  Remover Cliente <<<<<<<<
+
+ Informe o codigo do cliente: 1260
+Cliente removido com sucesso!!
+>>>>>>>> Consulta Cliente <<<<<<<<
+
+ Informe o codigo do cliente: 1259
+Codigo        Nome             Telefone                Conta           Saldo
+1259       BBBBBBB                 313464               125910          1000.0
+>>>>>>>>  Lista de Cliente <<<<<<<<
+>>>>>>>>>> numero de Clientes: 2
+Codigo        Nome                       Telefone                Conta           Saldo
+1258            AB                      3164646               125810          1000.0
+1259       BBBBBBB                       313464               125910          1000.0
+>>>>>>>>  Transferencia <<<<<<<<
+
+Informe o codigo do cliente que fara a transferencia: 1258
+
+Informe o codigo do cliente que recebera a transferencia: 1259
+
+ Informe o valor de Transferencia: 600
+Tranferencia realizada com sucesso!!!
+>>>>>>>>  Transferencia <<<<<<<<
+
+Informe o codigo do cliente que fara a transferencia: 1259
+
+Informe o codigo do cliente que recebera a transferencia: 1258
+
+ Informe o valor de Transferencia: 200
+Tranferencia realizada com sucesso!!!
+{'cod': ['1258', '1259'], 'saldo': [600.0, 1400.0], 'tr': [{'cod': '1259', 'tipo': 'pix', 'origem': '125910', 'destino': '125810', 'valor': 200.0}, {'cod': '1259', 'tipo': 'pix', 'origem': '125910', 'destino': '125810', 'valor': 200.0}]}
+>>>>>>>>  Deposito <<<<<<<<
+
+Informe o codigo do cliente que recebera a Deposito: 1258
+
+ Informe o valor de Deposito: 400
+Deposito realizado com sucesso!!!
+>>>>>>>>  Extrato - Conta <<<<<<<<
+
+Informe o codigo do cliente: 1258
+*****************************
+>>> Cliente: AB (Codigo: 1258) C.C. 125810- Saldo: 1000.0
+{'cod': ['1258', '1259'], 'saldo': [1000.0, 1400.0], 'tr': [{'cod': '1259', 'tipo': 'pix', 'origem': '125910', 'destino': '125810', 'valor': 200.0}, {'cod': '1259', 'tipo': 'pix', 'origem': '125910', 'destino': '125810', 'valor': 200.0}]}
+

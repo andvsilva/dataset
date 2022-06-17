@@ -10,7 +10,7 @@ class banco:
     def CadastrarCliente():
         global numClientes
 
-        if numClientes < 3:
+        if numClientes < 20:
             print(">>>>>>>> Cadastrar Cliente <<<<<<<<")
             cod = input('\n Informe o código do cliente: ')
             nome = input('\n Informe o nome do cliente: ')
@@ -25,6 +25,7 @@ class banco:
             Contas['cod'].append(cod)
             Contas['saldo'].append(pdeposito)
             numClientes += 1
+            print("mais um cliente adicionado")
         else:
             print('\n Numero maximo de clientes atingido!!')
             print('Encerrando o sistema...')
@@ -63,6 +64,7 @@ class banco:
             print('>>>> Codigo Invalido!!!')
             
     def RemoverCliente():
+        global numClientes
         print(">>>>>>>>  Remover Cliente <<<<<<<<")
         cod = input('\n Informe o codigo do cliente: ')
         codv = cod in Clientes['cod'] # retorna True ou False
@@ -75,17 +77,18 @@ class banco:
             Clientes['cc'].pop(pos)
             Contas['cod'].pop(pos)
             Contas['saldo'].pop(pos)
+            numClientes = numClientes - 1 
 
             print('Cliente removido com sucesso!!')
         else:
             print('Codigo Invalido!!!')
 
     def ListaDeClientes():
-        print(">>>>>>>>  Lista de Cliente <<<<<<<<")
         global numClientes
+        print(">>>>>>>>  Lista de Cliente <<<<<<<<")
+        print(f'>>>>>>>>>> numero de Clientes: {numClientes}')
         print(f"{'Codigo'}  {'Nome':>10} {'Telefone':>30} {'Conta':>20} {'Saldo': >15}")
-        print('\n')
-
+        
         for pos in range(numClientes):
             print(f"{Clientes['cod'][pos]}  {Clientes['nome'][pos]:>12} {Clientes['tel'][pos]:>28} {Clientes['cc'][pos]:>20} {Contas['saldo'][pos]: >15}")
             
@@ -129,7 +132,7 @@ class cliente:
             Transf['destino'] = Clientes['cc'][pos2]
             Transf['valor'] = valorf
             
-            Contas['tr'] = Transf
+            Contas['tr'].append(Transf)
 
             print('Tranferencia realizada com sucesso!!!')
         else:
