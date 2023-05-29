@@ -33,9 +33,15 @@ def generate_words(ngroup):
 
     countingwords = dict(df['word'].value_counts())
     
-    with open(f'countingwordstxt/countingwords_groups_{ngroup}.txt', 'w') as f:
-        print(countingwords, file=f)
+    f = open(f'countingwordstxt/countingwords_groups_{ngroup}.txt', "w")
+    f.write("{\n")
 
+    for k in countingwords.keys():
+        f.write("'{}':'{}'\n".format(k, countingwords[k]))
+    
+    f.write("}")
+    f.close()
+    
     text = df['word'].values
 
     wordcloud = WordCloud().generate(str(text))
